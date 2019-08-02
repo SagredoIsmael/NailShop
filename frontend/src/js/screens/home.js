@@ -32,7 +32,7 @@ export default class home extends React.Component {
       <Wrapper>
         <SubWrapper>
           <InputDataView/>
-          <InstagramView/>
+        {/*  <InstagramView/> --> */}
         </SubWrapper>
       </Wrapper>
     )
