@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Colors from '../utils/colors'
+import HeaderView from '../components/headerView'
 import InstagramView from '../components/instagramView'
 import InputDataView from '../components/inputDataView'
 
@@ -12,7 +13,6 @@ const Title = styled.h1`
 const Wrapper = styled.section`
   display: flex;
   flex:1;
-  height: 100rem;
   background: ${Colors.backgroundGrey};
 `;
 
@@ -31,8 +31,9 @@ export default class home extends React.Component {
     return (
       <Wrapper>
         <SubWrapper>
+          <HeaderView/>
           <InputDataView/>
-        {/*  <InstagramView/> --> */}
+          <InstagramView/>
         </SubWrapper>
       </Wrapper>
     )

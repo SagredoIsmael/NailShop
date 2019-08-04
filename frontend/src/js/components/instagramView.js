@@ -20,7 +20,7 @@ const SubWrapper = styled.section`
 const Title = styled.h1`
   font-size: 1rem;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Rozha One', serif;
   margin: 0.5rem;
 `
 

@@ -60,7 +60,7 @@ const suggestions = [
 
 
 export const TextfieldOutline = ({label, style}) => {
-  
+  const classes = useStyles()
   return (
     <form className={classes.container} noValidate autoComplete="off">
         <TextField
@@ -135,9 +135,10 @@ function getSuggestions(value, { showEmpty = false } = {}) {
       })
 }
 
-const classes = useStyles()
 
-export const textFieldWithAutocomplete = ({title}) => {
+
+/*export const textFieldWithAutocomplete = ({title}) => {
+  const classes = useStyles()
   return (
     <div className={classes.root}>
       <div className={classes.divider} />
@@ -196,4 +197,4 @@ export const textFieldWithAutocomplete = ({title}) => {
       </Downshift>
     </div>
   )
-}
+}*/

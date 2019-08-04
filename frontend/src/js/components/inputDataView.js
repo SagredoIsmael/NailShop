@@ -15,9 +15,12 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   background-image: url(${pinkBackGround});
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: initial;
+  z-index:0;
+  margin-top: -17.2rem;
+  margin-bottom: 2rem;
 `
 
 const SubWrapper = styled.div`
@@ -27,15 +30,16 @@ const SubWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: white;
+  margin-top:17rem;
 `
 
 const InputDataView = ({openInstagramLink}) => (
   <Wrapper>
     <SubWrapper>
-     <TextfieldOutline label="Escoge tu tratamiento" style={{margin: '10rem'}}/>
+     <TextfieldOutline label="Escoge tu tratamiento" style={{margin: '8rem'}}/>
     </SubWrapper>
     <Link to="/professionals" style={{ textDecoration: 'none' }}>
-      <SimpleButton text="BOOKEAR" style={{display:'flex', marginBottom: '10rem'}} onClick={() => null}/>
+      <SimpleButton text="BOOKEAR" style={{display:'flex', marginBottom: '20rem', marginTop: '2rem'}} onClick={() => null}/>
     </Link>
   </Wrapper>
 )
