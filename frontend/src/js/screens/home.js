@@ -2,13 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import Colors from '../utils/colors'
 import HeaderView from '../components/headerView'
-import InstagramView from '../components/instagramView'
 import InputDataView from '../components/inputDataView'
-
-const Title = styled.h1`
-  font-size: 1.5rem;
-  text-align: center;
-`;
+import ServicesView from '../components/servicesView'
+import InstagramView from '../components/instagramView'
+import FooterView from '../components/footerView'
 
 const Wrapper = styled.section`
   display: flex;
@@ -33,7 +30,9 @@ export default class home extends React.Component {
         <SubWrapper>
           <HeaderView/>
           <InputDataView/>
+          <ServicesView/>
           <InstagramView/>
+          <FooterView/>
         </SubWrapper>
       </Wrapper>
     )

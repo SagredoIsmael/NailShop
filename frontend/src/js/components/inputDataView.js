@@ -5,7 +5,7 @@ import { openInstagramLink } from '../redux/actions/UI'
 import styled from 'styled-components'
 import Colors from '../utils/colors'
 import {SimpleButton} from './mui/buttons'
-import pinkBackGround from '../../img/background/backgroundPink.jpg'
+import pinkBackGround from '../../img/inputDataView/background.png'
 import {TextfieldOutline} from './mui/textFields'
 
 const Wrapper = styled.div`
@@ -19,18 +19,17 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-position: initial;
   z-index:0;
-  margin-top: -17.2rem;
-  margin-bottom: 2rem;
+  margin-top: -38rem;
 `
 
 const SubWrapper = styled.div`
   display: flex;
-  border-radius: 25px;
+  border-radius: 2rem;
   align-self: center;
   align-items: center;
   flex-direction: column;
   background-color: white;
-  margin-top:17rem;
+  margin-top:20rem;
 `
 
 const InputDataView = ({openInstagramLink}) => (
