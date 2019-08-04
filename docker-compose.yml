@@ -27,4 +27,4 @@ services:
       - NODE_ENV=development
     depends_on:
       - backend
-    command: npm start
+    command: bash -c "npm install && npm start"
