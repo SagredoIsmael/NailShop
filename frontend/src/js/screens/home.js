@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Colors from '../utils/colors'
+import MediaQuery from 'react-responsive'
 import HeaderView from '../components/headerView'
 import InputDataView from '../components/inputDataView'
 import ServicesView from '../components/servicesView'
@@ -27,13 +28,19 @@ export default class home extends React.Component {
   render() {
     return (
       <Wrapper>
-        <SubWrapper>
-          <HeaderView/>
-          <InputDataView/>
-          <ServicesView/>
-          <InstagramView/>
-          <FooterView/>
-        </SubWrapper>
+        <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>  {/* It's desktop or laptop*/}
+          <SubWrapper>
+            <HeaderView/>
+            <InputDataView/>
+            <ServicesView/>
+            <InstagramView/>
+            <FooterView/>
+          </SubWrapper>
+        </MediaQuery>
+        <MediaQuery maxDeviceWidth={1224}>  {/* It's mobile device*/}
+          Esta página aún no está disponible en la versión móvil, estamos trabajando en ello...
+          Por favor abrela desde tu PC
+        </MediaQuery>
       </Wrapper>
     )
   }
