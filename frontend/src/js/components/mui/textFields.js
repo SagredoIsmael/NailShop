@@ -5,6 +5,7 @@ import deburr from 'lodash/deburr'
 import Downshift from 'downshift'
 import Paper from '@material-ui/core/Paper';
 import MenuItem from '@material-ui/core/MenuItem'
+import Constants from '../../utils/globalConstants'
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -42,22 +43,6 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const suggestions = [
-  { label: 'Afghanistan' },
-  { label: 'Aland Islands' },
-  { label: 'Albania' },
-  { label: 'Algeria' },
-  { label: 'American Samoa' },
-  { label: 'Andorra' },
-  { label: 'Angola' },
-  { label: 'Anguilla' },
-  { label: 'Antarctica' },
-  { label: 'Antigua and Barbuda' },
-  { label: 'Argentina' },
-  { label: 'Armenia' },
-  { label: 'Aruba' },
-]
-
 
 export const TextfieldOutline = ({label, style}) => {
   const classes = useStyles()
@@ -76,11 +61,12 @@ export const TextfieldOutline = ({label, style}) => {
   )
 }
 
-function renderInput(inputProps) {
+const renderInput = (inputProps) => {
   const { InputProps, classes, ref, ...other } = inputProps
 
   return (
     <TextField
+      variant="outlined"
       InputProps={{
         inputRef: ref,
         classes: {
@@ -95,7 +81,7 @@ function renderInput(inputProps) {
 }
 
 
-function renderSuggestion(suggestionProps) {
+const renderSuggestion = (suggestionProps) => {
   const { suggestion, index, itemProps, highlightedIndex, selectedItem } = suggestionProps
   const isHighlighted = highlightedIndex === index
   const isSelected = (selectedItem || '').indexOf(suggestion.label) > -1;
@@ -116,14 +102,14 @@ function renderSuggestion(suggestionProps) {
 }
 
 
-function getSuggestions(value, { showEmpty = false } = {}) {
+const getSuggestions = (value, { showEmpty = false } = {}) => {
   const inputValue = deburr(value.trim()).toLowerCase();
   const inputLength = inputValue.length;
   let count = 0;
 
   return inputLength === 0 && !showEmpty
     ? []
-    : suggestions.filter(suggestion => {
+    : Constants.inputTratamiento.filter(suggestion => {
         const keep =
           count < 5 && suggestion.label.slice(0, inputLength).toLowerCase() === inputValue;
 
@@ -137,10 +123,11 @@ function getSuggestions(value, { showEmpty = false } = {}) {
 
 
 
-/*export const textFieldWithAutocomplete = ({title}) => {
-  const classes = useStyles()
+export const TextFieldDownshift = ({title, placeholder, style}) => {
+  const classes = useStyles();
+
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={style}>
       <div className={classes.divider} />
       <Downshift id="downshift-options">
         {({
@@ -162,7 +149,7 @@ function getSuggestions(value, { showEmpty = false } = {}) {
               }
             },
             onFocus: openMenu,
-            placeholder: 'test',
+            placeholder: placeholder,
           })
 
           return (
@@ -170,7 +157,7 @@ function getSuggestions(value, { showEmpty = false } = {}) {
               {renderInput({
                 fullWidth: true,
                 classes,
-                label: 'Countries',
+                label: title,
                 InputLabelProps: getLabelProps({ shrink: true }),
                 InputProps: { onBlur, onChange, onFocus },
                 inputProps,
@@ -196,5 +183,5 @@ function getSuggestions(value, { showEmpty = false } = {}) {
         }}
       </Downshift>
     </div>
-  )
-}*/
+  );
+}

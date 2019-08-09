@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: initial;
-  z-index:1;
+  z-index:0;
 `
 
 

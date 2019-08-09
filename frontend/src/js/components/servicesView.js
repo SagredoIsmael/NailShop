@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   align-self: center;
   align-items: center;
   flex-direction: column;
-  margin-top: -10rem;
+  margin-top: -8rem;
   z-index:2;
 `
 

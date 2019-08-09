@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import Colors from '../utils/colors'
 import {SimpleButton} from './mui/buttons'
 import pinkBackGround from '../../img/inputDataView/background.png'
-import {TextfieldOutline} from './mui/textFields'
+import {TextFieldDownshift} from './mui/textFields'
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,9 +15,10 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   background-image: url(${pinkBackGround});
-  background-size: contain;
+  background-size: auto;
   background-repeat: no-repeat;
-  background-position: initial;
+  background-position: top;
+  position:relative
   z-index:0;
   margin-top: -38rem;
 `
@@ -35,7 +36,7 @@ const SubWrapper = styled.div`
 const InputDataView = ({openInstagramLink}) => (
   <Wrapper>
     <SubWrapper>
-     <TextfieldOutline label="Escoge tu tratamiento" style={{margin: '8rem'}}/>
+     <TextFieldDownshift title="Escoge tu tratamiento" placeholder = "Manicura" style={{margin: '2rem'}}/>
     </SubWrapper>
     <Link to="/professionals" style={{ textDecoration: 'none' }}>
       <SimpleButton text="BOOKEAR" style={{display:'flex', marginBottom: '20rem', marginTop: '2rem'}} onClick={() => null}/>
