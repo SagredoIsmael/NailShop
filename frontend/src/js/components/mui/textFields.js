@@ -6,6 +6,7 @@ import Downshift from 'downshift'
 import Paper from '@material-ui/core/Paper';
 import MenuItem from '@material-ui/core/MenuItem'
 import Constants from '../../utils/globalConstants'
+import InputAdornment from '@material-ui/core/InputAdornment';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -18,7 +19,6 @@ const useStyles = makeStyles(theme => ({
   },
   root: {
     flexGrow: 1,
-    height: 250,
   },
   container1: {
     flexGrow: 1,
@@ -44,25 +44,33 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-export const TextfieldOutline = ({label, style}) => {
+export const TextfieldOutline = ({label, placeholder, style, icon}) => {
   const classes = useStyles()
   return (
     <form className={classes.container} noValidate autoComplete="off">
-        <TextField
+      <TextField
         id="outlined-email-input"
         style={style}
-        label={label}
+        label={label}  /*label is null, so there isnt label top*/
         className={classes.textField}
         name="TextfieldOutline"
         margin="normal"
         variant="outlined"
+        placeholder={placeholder}
+        InputProps= {{
+          startAdornment: icon? (
+            <InputAdornment position="start">
+              <img src={icon} alt="icon" style={{width:'2rem', padding:'1rem'}} />
+            </InputAdornment>
+          ) : null
+        }}
       />
     </form>
   )
 }
 
 const renderInput = (inputProps) => {
-  const { InputProps, classes, ref, ...other } = inputProps
+  const { InputProps, classes, ref, icon, ...other } = inputProps
 
   return (
     <TextField
@@ -74,6 +82,11 @@ const renderInput = (inputProps) => {
           input: classes.inputInput,
         },
         ...InputProps,
+        startAdornment: icon? (
+          <InputAdornment position="start">
+            <img src={icon} alt="icon" style={{width:'2rem', padding:'1rem'}} />
+          </InputAdornment>
+        ) : null
       }}
       {...other}
     />
@@ -123,7 +136,7 @@ const getSuggestions = (value, { showEmpty = false } = {}) => {
 
 
 
-export const TextFieldDownshift = ({title, placeholder, style}) => {
+export const TextFieldDownshift = ({label, placeholder, style, icon}) => {
   const classes = useStyles();
 
   return (
@@ -157,10 +170,11 @@ export const TextFieldDownshift = ({title, placeholder, style}) => {
               {renderInput({
                 fullWidth: true,
                 classes,
-                label: title,
+                label: label,   /*label is null, so there isnt label top*/
                 InputLabelProps: getLabelProps({ shrink: true }),
                 InputProps: { onBlur, onChange, onFocus },
                 inputProps,
+                icon: icon
               })}
 
               <div {...getMenuProps()}>
