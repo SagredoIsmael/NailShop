@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import Colors from '../utils/colors'
 import MediaQuery from 'react-responsive'
 import HeaderView from '../components/headerView'
-import InputDataView from '../components/inputDataView'
+import SearchView from '../components/searchView'
 import ServicesView from '../components/servicesView'
 import InstagramView from '../components/instagramView'
-import FooterView from '../components/footerView'
+import FooterView from '../components/footerView' 
 
 const Wrapper = styled.section`
   display: flex;
@@ -31,7 +31,7 @@ export default class home extends React.Component {
         <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>  {/* It's desktop or laptop*/}
           <SubWrapper>
             <HeaderView/>
-            <InputDataView/>
+            <SearchView/>
             <ServicesView/>
             <InstagramView/>
             <FooterView/>

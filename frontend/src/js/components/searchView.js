@@ -5,11 +5,11 @@ import { openInstagramLink } from '../redux/actions/UI'
 import styled from 'styled-components'
 import Colors from '../utils/colors'
 import { SimpleButton } from './mui/buttons'
-import pinkBackGround from '../../img/inputDataView/background.png'
+import pinkBackGround from '../../img/searchView/background.png'
 import { TextFieldDownshift, TextfieldOutline } from './mui/textFields'
-import calendarIcon from '../../img/inputDataView/icon_calendar.jpg'
-import nailPolishIcon from '../../img/inputDataView/icon_nail_polish.jpg'
-import locationIcon from '../../img/inputDataView/icon_location.jpg'
+import calendarIcon from '../../img/searchView/icon_calendar.jpg'
+import nailPolishIcon from '../../img/searchView/icon_nail_polish.jpg'
+import locationIcon from '../../img/searchView/icon_location.jpg'
 
 
 const Wrapper = styled.div`
@@ -54,7 +54,7 @@ const Title = styled.h1`
   margin-right: 5rem;
 `
 
-const InputDataView = ({openInstagramLink}) => (
+const SearchView = ({openInstagramLink}) => (
   <Wrapper>
     <SubWrapper>
     <Title>
@@ -81,8 +81,8 @@ const mapDispatchToProps = dispatch => {
   return {
     openInstagramLink: () => {
       dispatch(openInstagramLink())
-    },
+    }
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(InputDataView)
+export default connect(mapStateToProps, mapDispatchToProps)(SearchView)
