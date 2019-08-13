@@ -53,7 +53,7 @@ const tileData = [
 
 const InstagramView = ({openInstagramLink}) => (
   <div style={{alignSelf:"center", display: "flex", alignItems:"center", flexDirection:"column", zIndex:3, marginTop:'-12rem'}}>
-    <button style={{cursor: "pointer", border:"none", display: "flex", alignItems:"center", flexDirection:"column", outline:"none"}} onClick={(e) => openInstagramLink()}>
+    <button style={{cursor: "pointer", border:"none", display: "flex", alignItems:"center", flexDirection:"column", outline:"none", backgroundColor: "white"}} onClick={(e) => openInstagramLink()}>
         <SubWrapper>
           <img style={{width: '2rem', height: '2rem', margin:'auto'}} src={instaLogo} alt="instaLogo" />
           <Title>
