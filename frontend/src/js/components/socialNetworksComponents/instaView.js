@@ -1,16 +1,13 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { openInstagramLink } from '../redux/actions/UI'
 import styled from 'styled-components'
-import Colors from '../utils/colors'
-import instaLogo from '../../img/instagramView/insta_logo.png'
-import GridImages from './mui/gridImages'
-import {SimpleButton} from './mui/buttons'
-import image1 from '../../img/instagramView/0cb5b2d5a32ec9c525d992fe427a5e0d.jpg'
-import image2 from '../../img/instagramView/05e5070122a287bca0db9e4e94f41ff0.jpg'
-import image4 from '../../img/instagramView/a6b909034352a290336713cf45ed52ff.jpg'
-import image5 from '../../img/instagramView/da7cebbc4185d2395c7b3e3c6f3d1d6c.jpg'
-
+import Colors from '../../utils/colors'
+import instaLogo from '../../../img/instaView/insta_logo.png'
+import GridImages from '../muiComponents/gridImages'
+import {SimpleButton} from '../muiComponents/buttons'
+import image1 from '../../../img/instaView/0cb5b2d5a32ec9c525d992fe427a5e0d.jpg'
+import image2 from '../../../img/instaView/05e5070122a287bca0db9e4e94f41ff0.jpg'
+import image4 from '../../../img/instaView/a6b909034352a290336713cf45ed52ff.jpg'
+import image5 from '../../../img/instaView/da7cebbc4185d2395c7b3e3c6f3d1d6c.jpg'
 
 const SubWrapper = styled.section`
   display: flex;
@@ -51,7 +48,7 @@ const tileData = [
     },
 ]
 
-const InstagramView = ({openInstagramLink}) => (
+const InstaView = ({openInstagramLink}) => (
   <div style={{alignSelf:"center", display: "flex", alignItems:"center", flexDirection:"column", zIndex:3, marginTop:'-12rem'}}>
     <button style={{cursor: "pointer", border:"none", display: "flex", alignItems:"center", flexDirection:"column", outline:"none", backgroundColor: "white"}} onClick={(e) => openInstagramLink()}>
         <SubWrapper>
@@ -66,16 +63,4 @@ const InstagramView = ({openInstagramLink}) => (
   </div>
 )
 
-const mapStateToProps = state => {
-  return {test:state}
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    openInstagramLink: () => {
-      dispatch(openInstagramLink())
-    },
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(InstagramView)
+export default InstaView

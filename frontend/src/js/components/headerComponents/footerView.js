@@ -1,9 +1,7 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { openInstagramLink } from '../redux/actions/UI'
 import styled from 'styled-components'
-import Colors from '../utils/colors'
-import backGroundImage from '../../img/footerView/footer.png'
+import Colors from '../../utils/colors'
+import backGroundImage from '../../../img/footerView/footer.png'
 
 const Wrapper = styled.div`
   display: flex;
@@ -24,16 +22,4 @@ const FooterView = ({openInstagramLink}) => (
   <Wrapper/>
 )
 
-const mapStateToProps = state => {
-  return {test:state}
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    openInstagramLink: () => {
-      dispatch(openInstagramLink())
-    },
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(FooterView)
+export default FooterView

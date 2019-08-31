@@ -1,11 +1,8 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { openInstagramLink } from '../redux/actions/UI'
 import styled from 'styled-components'
-import Colors from '../utils/colors'
-import backGroundImage from '../../img/headerView/header.png'
-import miniBackGroundImage from '../../img/headerView/mini-header.png'
-
+import Colors from '../../utils/colors'
+import backGroundImage from '../../../img/headerView/header.png'
+import miniBackGroundImage from '../../../img/headerView/mini-header.png'
 
 const Wrapper = styled.div`
   display: flex;
@@ -44,16 +41,4 @@ export const MiniHeaderView = ({openInstagramLink}) => (
   <MiniWrapper/>
 )
 
-const mapStateToProps = state => {
-  return {test:state}
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    openInstagramLink: () => {
-      dispatch(openInstagramLink())
-    },
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderView)
+export default HeaderView

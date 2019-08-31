@@ -1,16 +1,14 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { openInstagramLink } from '../redux/actions/UI'
 import styled from 'styled-components'
-import Colors from '../utils/colors'
-import backgroundImage from '../../img/servicesView/background.png'
-import manicuraImage from '../../img/servicesView/manicura.png'
-import peinadosImage from '../../img/servicesView/peinados.png'
-import coloracionImage from '../../img/servicesView/coloracion.png'
-import depilacionImage from '../../img/servicesView/depilacion.png'
-import n1Image from '../../img/servicesView/n1.png'
-import n2Image from '../../img/servicesView/n2.png'
-import n3Image from '../../img/servicesView/n3.png'
+import Colors from '../../utils/colors'
+import backgroundImage from '../../../img/ourServicesView/background.png'
+import manicuraImage from '../../../img/ourServicesView/manicura.png'
+import peinadosImage from '../../../img/ourServicesView/peinados.png'
+import coloracionImage from '../../../img/ourServicesView/coloracion.png'
+import depilacionImage from '../../../img/ourServicesView/depilacion.png'
+import n1Image from '../../../img/ourServicesView/n1.png'
+import n2Image from '../../../img/ourServicesView/n2.png'
+import n3Image from '../../../img/ourServicesView/n3.png' 
 
 
 const Wrapper = styled.div`
@@ -69,7 +67,7 @@ const TextContainWithoutMargins = styled.h1`
   font-family: 'Rozha One', serif;
 `
 
-const ServicesView = ({openInstagramLink}) => (
+const OurServicesView = ({openInstagramLink}) => (
   <Wrapper>
     <Title>
       QUÉ OFRECEMOS
@@ -121,16 +119,4 @@ const ServicesView = ({openInstagramLink}) => (
   </Wrapper>
 )
 
-const mapStateToProps = state => {
-  return {test:state}
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    openInstagramLink: () => {
-      dispatch(openInstagramLink())
-    },
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ServicesView)
+export default OurServicesView

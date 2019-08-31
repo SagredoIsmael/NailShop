@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import Colors from '../utils/colors'
 import MediaQuery from 'react-responsive'
-import HeaderView from '../components/headerView'
-import SearchView from '../components/searchView'
-import ServicesView from '../components/servicesView'
-import InstagramView from '../components/instagramView'
-import FooterView from '../components/footerView' 
+import HeaderView from '../containers/headerContainers/headerContainer'
+import SearchView from '../containers/searchContainers/searchViewContainer'
+import OurServicesView from '../containers/ourServicesContainers/ourServicesContainer'
+import InstaView from '../containers/socialNetworksContainers/instaContainer'
+import FooterView from '../containers/headerContainers/footerContainer'
 
 const Wrapper = styled.section`
   display: flex;
@@ -32,8 +32,8 @@ export default class home extends React.Component {
           <SubWrapper>
             <HeaderView/>
             <SearchView/>
-            <ServicesView/>
-            <InstagramView/>
+            <OurServicesView/>
+            <InstaView/>
             <FooterView/>
           </SubWrapper>
         </MediaQuery>

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Colors from '../utils/colors'
-import { MiniHeaderView } from '../components/headerView'
-import FooterView from '../components/footerView'
+import MiniHeaderView from '../containers/headerContainers/miniHeaderContainer'
+import FooterView from '../containers/headerContainers/footerContainer'
 
 const Wrapper = styled.section`
   display: flex;
