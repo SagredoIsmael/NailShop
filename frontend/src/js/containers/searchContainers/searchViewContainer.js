@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import SearchView from '../../components/searchComponents/searchView'
-import { setSearchService, setPostalCodeSearch, setDateSearch } from '../../actions/search'
+import { setServiceSearch, setPostalCodeSearch, setDateSearch } from '../../actions/search'
 
 const mapStateToProps = state => {
   return {test:state}

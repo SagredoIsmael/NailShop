@@ -52,18 +52,17 @@ const Title = styled.h1`
   margin-right: 5rem;
 `
 
-const SearchView = ({setServiceSearch}) => (
+const SearchView = ({setServiceSearch, setPostalCodeSearch, setDateSearch}) => (
   <Wrapper>
     <SubWrapper>
     <Title>
       DINOS QUÉ, CUÁNDO Y DÓNDE
     </Title>
     <TextFieldWrapper>
-      <TextFieldDownshift placeholder = "Escoge tu tratamiento" style={{margin: '2rem'}} icon={nailPolishIcon}/>
-      <TextfieldOutline placeholder = "Código postal" style={{margin: '2rem', marginTop:'3rem'}} icon={locationIcon}/>
+      <TextFieldDownshift placeholder = "Escoge tu tratamiento" style={{margin: '2rem'}} icon={nailPolishIcon} onChange={() => console.log('@@@@@@@change')}/>
+      <TextfieldOutline placeholder = "Código postal" style={{margin: '2rem', marginTop:'3rem'}} icon={locationIcon} onChange={(e) => setPostalCodeSearch(e)}/>
     </TextFieldWrapper>
-     <TextfieldOutline placeholder = "Fecha y hora" style={{margin: '2rem'}} icon={calendarIcon}/>
-
+     <TextfieldOutline placeholder = "Fecha y hora" style={{margin: '2rem'}} icon={calendarIcon} onChange={(e) => setDateSearch(e)}/>
     </SubWrapper>
     <Link to="/professionals" style={{ textDecoration: 'none' }}>
       <SimpleButton text="BOOKEAR" style={{display:'flex', marginBottom: '20rem', marginTop: '2rem'}} onClick={() => null}/>

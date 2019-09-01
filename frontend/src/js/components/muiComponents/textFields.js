@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-export const TextfieldOutline = ({label, placeholder, style, icon}) => {
+export const TextfieldOutline = ({label, placeholder, style, icon, onChange}) => {
   const classes = useStyles()
   return (
     <form className={classes.container} noValidate autoComplete="off">
@@ -57,6 +57,7 @@ export const TextfieldOutline = ({label, placeholder, style, icon}) => {
         margin="normal"
         variant="outlined"
         placeholder={placeholder}
+        onChange={event => onChange(event.target.value)}
         InputProps= {{
           startAdornment: icon? (
             <InputAdornment position="start">
@@ -136,8 +137,8 @@ const getSuggestions = (value, { showEmpty = false } = {}) => {
 
 
 
-export const TextFieldDownshift = ({label, placeholder, style, icon}) => {
-  const classes = useStyles();
+export const TextFieldDownshift = ({label, placeholder, style, icon, onChange}) => {
+  const classes = useStyles()
 
   return (
     <div className={classes.root} style={style}>
@@ -160,6 +161,7 @@ export const TextFieldDownshift = ({label, placeholder, style, icon}) => {
               if (event.target.value === '') {
                 clearSelection();
               }
+              
             },
             onFocus: openMenu,
             placeholder: placeholder,
