@@ -52,7 +52,7 @@ const Title = styled.h1`
   margin-right: 5rem;
 `
 
-const SearchView = ({setServiceSearch, setPostalCodeSearch, setDateSearch}) => (
+const SearchView = ({setServiceSearch, setPostalCodeSearch, setDateSearch, serviceTypeSearch, postalCodeSearch, dateSearch}) => (
   <Wrapper>
     <SubWrapper>
     <Title>

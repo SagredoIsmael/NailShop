@@ -1,9 +1,14 @@
 import { connect } from 'react-redux'
 import SearchView from '../../components/searchComponents/searchView'
 import { setServiceSearch, setPostalCodeSearch, setDateSearch } from '../../actions/search'
+import { getServiceTypeSearch, getPostalCodeSearch, getDateSearch } from '../../selectors/search'
 
 const mapStateToProps = state => {
-  return {test:state}
+  return {
+    serviceTypeSearch: getServiceTypeSearch(state),
+    postalCodeSearch: getPostalCodeSearch(state),
+    dateSearch: getDateSearch(state)
+  }
 }
 
 const mapDispatchToProps = dispatch => {
