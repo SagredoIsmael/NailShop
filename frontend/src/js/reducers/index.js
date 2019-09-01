@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux'
-import UIreducer from './UI'
+import UIReducer from './UI'
+import searchReducer from './search'
 
 export const rootReducer = combineReducers({
-  UI: UIreducer
+  UI: UIReducer,
+  search: searchReducer
 })
 
 export default rootReducer

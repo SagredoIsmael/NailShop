@@ -2,7 +2,7 @@ import { OPEN_INSTAGRAM_LINK } from '../actions/types'
 import Constants from '../utils/globalConstants'
 
 const initialState = {
-  TEST: []
+  isInstagramLinkOpen : false,
 }
 
 export default (state = initialState, action) => {
@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
 
     case OPEN_INSTAGRAM_LINK:
       window.open(Constants.urlInstagram, "_blank")
-      return state
+      return {...state, isInstagramLinkOpen: true}
 
     default:
       return state

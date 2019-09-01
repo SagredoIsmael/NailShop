@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import SearchView from '../../components/searchComponents/searchView'
-import { openInstagramLink } from '../../actions/UI'
+import { setSearchService, setPostalCodeSearch, setDateSearch } from '../../actions/search'
 
 const mapStateToProps = state => {
   return {test:state}
@@ -8,9 +8,15 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    openInstagramLink: () => {
-      dispatch(openInstagramLink())
-    }
+    setServiceSearch: (service) => {
+      dispatch(setServiceSearch(service))
+    },
+    setPostalCodeSearch: (postalCode) => {
+      dispatch(setPostalCodeSearch(postalCode))
+    },
+    setDateSearch: (date) => {
+      dispatch(setDateSearch(date))
+    },
   }
 }
 
