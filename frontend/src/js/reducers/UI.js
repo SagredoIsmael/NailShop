@@ -1,5 +1,5 @@
 import { OPEN_INSTAGRAM_LINK } from '../actions/types'
-import Constants from '../../utils/globalConstants'
+import Constants from '../utils/globalConstants'
 
 const initialState = {
   TEST: []

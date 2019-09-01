@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { openInstagramLink } from '../../redux/actions/UI'
+import { openInstagramLink } from '../../actions/UI'
 import HeaderView from '../../components/headerComponents/headerView'
 
 const mapStateToProps = state => {

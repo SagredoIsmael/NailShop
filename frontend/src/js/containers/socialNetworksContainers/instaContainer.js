@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { openInstagramLink } from '../../redux/actions/UI'
+import { openInstagramLink } from '../../actions/UI'
 import InstaView from '../../components/socialNetworksComponents/instaView'
 
 const mapStateToProps = state => {

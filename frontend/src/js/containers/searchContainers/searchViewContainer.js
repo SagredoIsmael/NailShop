@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import SearchView from '../../components/searchComponents/searchView'
-import { openInstagramLink } from '../../redux/actions/UI'
+import { openInstagramLink } from '../../actions/UI'
 
 const mapStateToProps = state => {
   return {test:state}
