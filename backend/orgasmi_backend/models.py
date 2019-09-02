@@ -53,6 +53,20 @@ class Service(models.Model):
     def __str__(self):
         return self.name
 
+        
+class Review(models.Model):
+    RATING_CHOICES = (
+        (1, '1'),
+        (2, '2'),
+        (3, '3'),
+        (4, '4'),
+        (5, '5'),
+    )
+    creation_datetime = models.DateTimeField("Creation date", auto_now=True)
+    comment = models.TextField()
+    rating = models.IntegerField(choices=RATING_CHOICES)
+
+
 class Order(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.PROTECT)
@@ -68,15 +82,4 @@ class Order(models.Model):
     user_review = models.ForeignKey(Review, on_delete=models.PROTECT)
 
 
-class Review(models.Model):
-    RATING_CHOICES = (
-        (1, '1'),
-        (2, '2'),
-        (3, '3'),
-        (4, '4'),
-        (5, '5'),
-    )
-    creation_datetime = models.DateTimeField("Creation date", auto_now=True)
-    comment = models.TextField()
-    rating = models.IntegerField(choices=RATING_CHOICES)
 
