@@ -14,8 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls import url, include
 from django.urls import path
+from rest_framework import routers
+from orgasmi_backend import views
+
+
+router = routers.DefaultRouter()
+router.register(r"orders", views.OrdersViewSet, basename="Orders")
+router.register(r"users", views.UsersViewSet, basename="Users")
+router.register(r"professionals", views.ProfessionalViewSet, basename="Professionals")
+router.register(r"services", views.ServicesViewSet, basename="Services")
+
 
 urlpatterns = [
+    url(r"^", include(router.urls)),
     path('admin/', admin.site.urls),
+
 ]
