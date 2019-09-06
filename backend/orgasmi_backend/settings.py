@@ -124,6 +124,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+scriptpath = os.path.realpath(__file__)
+PROJECT_DIR = "/".join(scriptpath.split("/")[:-1])
+STATIC_ROOT = os.path.join(PROJECT_DIR, '../staticfiles/')
 
 
 REST_FRAMEWORK = {
