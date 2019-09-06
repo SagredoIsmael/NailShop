@@ -28,7 +28,7 @@ router.register(r"services", views.ServicesViewSet, basename="Services")
 
 
 urlpatterns = [
-    url(r"^", include(router.urls)),
+    url(r"api/", include(router.urls)),
     path('admin/', admin.site.urls),
 
 ]
