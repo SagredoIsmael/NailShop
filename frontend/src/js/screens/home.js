@@ -8,27 +8,61 @@ import OurServicesView from '../containers/ourServicesContainers/ourServicesCont
 import InstaView from '../containers/socialNetworksContainers/instaContainer'
 import FooterView from '../containers/headerContainers/footerContainer'
 
-const Wrapper = styled.section`
-  display: flex;
-  flex:1;
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: 18% 1fr 18%;
+  grid-template-rows: 1fr;
   background: ${Colors.backgroundGrey};
+  height:490vh;
 `;
 
-const SubWrapper = styled.section`
-  display: flex;
-  flex:1;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  background: white;
-  flex-direction:column;
+const WrapperMobile = styled.div`
+  display: grid;
+  grid-template-columns: 18% 1fr 18%;
+  grid-template-rows: 1fr;
+  background: ${Colors.backgroundGrey};
+  height:140vh;
+
 `;
+
+const SubWrapper = styled.div`
+  display: grid;
+  grid-column:2;
+  background: white;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 20% 20% 20% 30%;
+`;
+
 
 export default class home extends React.Component {
 
   render() {
     return (
-      <Wrapper>
-        <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>  {/* It's desktop or laptop*/}
+      <div>
+        <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>
+          <Wrapper>
+            <SubWrapper>
+              <HeaderView/>
+              <SearchView/>
+            </SubWrapper>
+          </Wrapper>
+        </MediaQuery>
+        <MediaQuery maxDeviceWidth={1224}>
+          <WrapperMobile>
+            <SubWrapper>
+              <HeaderView/>
+              <SearchView/>
+            </SubWrapper>
+          </WrapperMobile>
+        </MediaQuery>
+      </div>
+    )
+  }
+
+  /*render() {
+    return (
+      <Container>
+        <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>
           <SubWrapper>
             <HeaderView/>
             <SearchView/>
@@ -37,12 +71,12 @@ export default class home extends React.Component {
             <FooterView/>
           </SubWrapper>
         </MediaQuery>
-        <MediaQuery maxDeviceWidth={1224}>  {/* It's mobile device*/}
+        <MediaQuery maxDeviceWidth={1224}>
           Esta página aún no está disponible en la versión móvil, estamos trabajando en ello...
           Por favor abrela desde tu PC
         </MediaQuery>
-      </Wrapper>
+      </Container>
     )
-  }
+  }*/
 
 }

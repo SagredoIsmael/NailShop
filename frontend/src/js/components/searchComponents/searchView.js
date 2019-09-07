@@ -11,18 +11,15 @@ import locationIcon from '../../../img/searchView/icon_location.jpg'
 
 
 const Wrapper = styled.div`
-  display: flex;
-  width: -webkit-fill-available;
-  align-self: center;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-row:2;
   background-image: url(${pinkBackGround});
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: top;
-  position:relative
-  z-index:0;
-  margin-top: -38rem;
+  background-position: center;
+  margin-top:-41%;
+  z-index:5;
+
 `
 
 const SubWrapper = styled.div`
@@ -54,19 +51,7 @@ const Title = styled.h1`
 
 const SearchView = ({setServiceSearch, setPostalCodeSearch, setDateSearch, serviceTypeSearch, postalCodeSearch, dateSearch}) => (
   <Wrapper>
-    <SubWrapper>
-    <Title>
-      DINOS QUÉ, CUÁNDO Y DÓNDE
-    </Title>
-    <TextFieldWrapper>
-      <TextFieldDownshift placeholder = "Escoge tu tratamiento" style={{margin: '2rem'}} icon={nailPolishIcon} onChange={() => console.log('@@@@@@@change')}/>
-      <TextfieldOutline placeholder = "Código postal" style={{margin: '2rem', marginTop:'3rem'}} icon={locationIcon} onChange={(e) => setPostalCodeSearch(e)}/>
-    </TextFieldWrapper>
-     <TextfieldOutline placeholder = "Fecha y hora" style={{margin: '2rem'}} icon={calendarIcon} onChange={(e) => setDateSearch(e)}/>
-    </SubWrapper>
-    <Link to="/professionals" style={{ textDecoration: 'none' }}>
-      <SimpleButton text="BOOKEAR" style={{display:'flex', marginBottom: '20rem', marginTop: '2rem'}} onClick={() => null}/>
-    </Link>
+
   </Wrapper>
 )
 
