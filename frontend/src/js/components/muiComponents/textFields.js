@@ -13,10 +13,6 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexWrap: 'wrap',
   },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-  },
   root: {
     flexGrow: 1,
   },
@@ -27,19 +23,11 @@ const useStyles = makeStyles(theme => ({
   paper: {
     position: 'absolute',
     zIndex: 1,
-    marginTop: theme.spacing(1),
     left: 0,
     right: 0,
   },
-  inputRoot: {
-    flexWrap: 'wrap',
-  },
-  inputInput: {
-    width: 'auto',
-    flexGrow: 1,
-  },
-  divider: {
-    height: theme.spacing(2),
+  resize:{
+    fontSize:'0.8vw',
   },
 }))
 
@@ -52,16 +40,21 @@ export const TextfieldOutline = ({label, placeholder, style, icon, onChange}) =>
         id="outlined-email-input"
         style={style}
         label={label}  /*label is null, so there isnt label top*/
-        className={classes.textField}
         name="TextfieldOutline"
         margin="normal"
         variant="outlined"
         placeholder={placeholder}
         onChange={event => onChange(event.target.value)}
         InputProps= {{
+          classes: {
+              input: classes.resize,
+            },
+            style: {
+              height: '3vw'
+            },
           startAdornment: icon? (
             <InputAdornment position="start">
-              <img src={icon} alt="icon" style={{width:'2rem', padding:'1rem'}} />
+              <img src={icon} alt="icon" style={{width:'1.5vw', padding:'1vw'}} />
             </InputAdornment>
           ) : null
         }}
@@ -71,21 +64,21 @@ export const TextfieldOutline = ({label, placeholder, style, icon, onChange}) =>
 }
 
 const renderInput = (inputProps) => {
-  const { InputProps, classes, ref, icon, ...other } = inputProps
-
+  const { InputProps, classes, icon, ...other } = inputProps
   return (
     <TextField
       variant="outlined"
       InputProps={{
-        inputRef: ref,
         classes: {
-          root: classes.inputRoot,
-          input: classes.inputInput,
+            input: classes.resize,
+          },
+        style: {
+          height: '3vw'
         },
         ...InputProps,
         startAdornment: icon? (
           <InputAdornment position="start">
-            <img src={icon} alt="icon" style={{width:'2rem', padding:'1rem'}} />
+            <img src={icon} alt="icon" style={{width:'1.5vw', padding:'1vw'}} />
           </InputAdornment>
         ) : null
       }}
@@ -142,7 +135,6 @@ export const TextFieldDownshift = ({label, placeholder, style, icon, onChange}) 
 
   return (
     <div className={classes.root} style={style}>
-      <div className={classes.divider} />
       <Downshift id="downshift-options">
         {({
           clearSelection,
@@ -161,7 +153,6 @@ export const TextFieldDownshift = ({label, placeholder, style, icon, onChange}) 
               if (event.target.value === '') {
                 clearSelection();
               }
-              
             },
             onFocus: openMenu,
             placeholder: placeholder,
