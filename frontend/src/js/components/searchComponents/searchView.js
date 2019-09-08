@@ -19,7 +19,6 @@ const Wrapper = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  z-index:5;
 `
 
 const InputDataWrapper = styled.div`

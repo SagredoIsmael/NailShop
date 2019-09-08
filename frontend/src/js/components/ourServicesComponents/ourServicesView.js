@@ -8,57 +8,86 @@ import coloracionImage from '../../../img/ourServicesView/coloracion.png'
 import depilacionImage from '../../../img/ourServicesView/depilacion.png'
 import n1Image from '../../../img/ourServicesView/n1.png'
 import n2Image from '../../../img/ourServicesView/n2.png'
-import n3Image from '../../../img/ourServicesView/n3.png' 
+import n3Image from '../../../img/ourServicesView/n3.png'
 
 
 const Wrapper = styled.div`
-  display: flex;
-  width: -webkit-fill-available;
-  align-self: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: -8rem;
-  z-index:2;
+  display: grid;
+  grid-row:3;
+  grid-template-columns: 100%;
+  grid-template-rows: 8% 12% 25% 8% 12% 25%;
 `
 
-const SubWrapper = styled.div`
-  display: flex;
-  align-self: normal;
-  flex-direction: row;
-  margin: 1rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  margin-bottom: 4rem;
+const Title1 = styled.h1`
+  display: grid;
+  grid-row:1;
+  font-size: 2vw;
+  text-align: center;
+  font-family: 'Rozha One', serif;
+`
+
+const TextContain1 = styled.h1`
+  display: grid;
+  grid-row:2;
+  font-size: 1vw;
+  text-align: center;
+  font-family: 'Rozha One', serif;
+  margin-left: 4vw;
+  margin-right: 4vw;
+`
+
+const ImagesWrapper = styled.div`
+  display: grid;
+  grid-row:3;
+  grid-template-columns: 10% 20% 20% 20% 20% 10%;
+  grid-template-rows: 100%;
+`
+
+const Image1Wrapper = styled.div`
+  display: grid;
+  grid-column:2;
+`
+
+const Image2Wrapper = styled.div`
+  display: grid;
+  grid-column:3;
+`
+
+const Image3Wrapper = styled.div`
+  display: grid;
+  grid-column:4;
+`
+
+const Image4Wrapper = styled.div`
+  display: grid;
+  grid-column:5;
+`
+
+const Title2 = styled.h1`
+  display: grid;
+  grid-row:4;
+  font-size: 2vw;
+  text-align: center;
+  font-family: 'Rozha One', serif;
+`
+
+const TextContain2 = styled.h1`
+  display: grid;
+  grid-row:5;
+  font-size: 1vw;
+  text-align: center;
+  font-family: 'Rozha One', serif;
+  margin-left: 4vw;
+  margin-right: 4vw;
 `
 
 const BackgroundWrapper = styled.div`
-  display: flex;
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
-  align-self: normal;
-  flex-direction: row;
-  margin-top: -4rem;
+  display: grid;
+  grid-row:6;
   background-image: url(${backgroundImage});
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: initial;
-  z-index:1;
-`
-
-const Title = styled.h1`
-  font-size: 2rem;
-  text-align: center;
-  font-family: 'Rozha One', serif;
-  margin: 0.5rem;
-`
-
-const TextContain = styled.h1`
-  font-size: 0.8rem;
-  text-align: center;
-  font-family: 'Rozha One', serif;
-  margin-left: 7rem;
-  margin-right:7rem;
-  margin-bottom: 2rem;
+  background-position: center;
 `
 
 const TextContainWithoutMargins = styled.h1`
@@ -68,6 +97,42 @@ const TextContainWithoutMargins = styled.h1`
 `
 
 const OurServicesView = ({openInstagramLink}) => (
+  <Wrapper>
+    <Title1>
+      QUÉ OFRECEMOS
+    </Title1>
+    <TextContain1>
+      Te hacemos unas uñikis perfectas, muy perfiladas y si no estás contento/a te devolvemos todo el dinero + 230€ en concepto de insatisfacción.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper susci
+    </TextContain1>
+    <ImagesWrapper>
+      <Image1Wrapper>
+        <img style={{width: '9vw'}} src={manicuraImage} alt="manicuraImage" />
+      </Image1Wrapper>
+      <Image2Wrapper>
+        <img style={{width: '9vw'}} src={peinadosImage} alt="peinadosImage" />
+      </Image2Wrapper>
+      <Image3Wrapper>
+        <img style={{width: '9vw'}} src={coloracionImage} alt="coloracionImage" />
+      </Image3Wrapper>
+      <Image4Wrapper>
+        <img style={{width: '9vw'}} src={depilacionImage} alt="depilacionImage" />
+      </Image4Wrapper>
+    </ImagesWrapper>
+    <Title2>
+      CÓMO
+    </Title2>
+    <TextContain2>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper susci
+    </TextContain2>
+    <BackgroundWrapper>
+
+    </BackgroundWrapper>
+
+  </Wrapper>
+)
+
+
+/*const OurServicesView = ({openInstagramLink}) => (
   <Wrapper>
     <Title>
       QUÉ OFRECEMOS
@@ -117,6 +182,6 @@ const OurServicesView = ({openInstagramLink}) => (
       </div>
     </BackgroundWrapper>
   </Wrapper>
-)
+)*/
 
 export default OurServicesView

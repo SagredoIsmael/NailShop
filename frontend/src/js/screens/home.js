@@ -30,7 +30,7 @@ const SubWrapper = styled.div`
   grid-column:2;
   background: white;
   grid-template-columns: 1fr;
-  grid-template-rows: 10% 20% 20% 20% 30%;
+  grid-template-rows: 10% 20% 30% 20% 20%;
 `;
 
 
@@ -44,6 +44,7 @@ export default class home extends React.Component {
             <SubWrapper>
               <HeaderView/>
               <SearchView/>
+              <OurServicesView/>
             </SubWrapper>
           </Wrapper>
         </MediaQuery>
@@ -52,6 +53,7 @@ export default class home extends React.Component {
             <SubWrapper>
               <HeaderView/>
               <SearchView/>
+              <OurServicesView/>
             </SubWrapper>
           </WrapperMobile>
         </MediaQuery>
