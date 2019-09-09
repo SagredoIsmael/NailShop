@@ -100,7 +100,7 @@ const renderSuggestion = (suggestionProps) => {
       selected={isHighlighted}
       component="div"
       style={{
-        fontWeight: isSelected ? 500 : 400,
+        fontSize:'0.8vw'
       }}
     >
       {suggestion.label}

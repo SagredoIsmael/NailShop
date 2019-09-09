@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-row:3;
   grid-template-columns: 100%;
-  grid-template-rows: 8% 12% 25% 8% 12% 25%;
+  grid-template-rows: 8% 12% 20% 8% 12% 30%;
 `
 
 const Title1 = styled.h1`
@@ -41,6 +41,7 @@ const ImagesWrapper = styled.div`
   grid-row:3;
   grid-template-columns: 10% 20% 20% 20% 20% 10%;
   grid-template-rows: 100%;
+  align-items:center;
 `
 
 const Image1Wrapper = styled.div`
@@ -88,12 +89,84 @@ const BackgroundWrapper = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 25% 25% 25% 25%;
+  justify-items: center;
 `
 
-const TextContainWithoutMargins = styled.h1`
-  font-size: 0.8rem;
+const ImageSection1Wrapper = styled.div`
+  display: grid;
+  grid-row:1;
+  grid-column:1;
+`
+
+const TextSection1Wrapper = styled.div`
+  display: grid;
+  grid-row:2;
+  grid-column:1;
+  font-size: 2vw;
   text-align: center;
   font-family: 'Rozha One', serif;
+`
+
+const SubTextSection1Wrapper = styled.div`
+  display: grid;
+  grid-row:3;
+  grid-column:1;
+  font-size: 0.8vw;
+  text-align: center;
+  font-family: 'Rozha One', serif;
+  align-items: end;
+`
+
+const ImageSection2Wrapper = styled.div`
+  display: grid;
+  grid-row:2;
+  grid-column:2;
+`
+
+const TextSection2Wrapper = styled.div`
+  display: grid;
+  grid-row:3;
+  grid-column:2;
+  font-size: 2vw;
+  text-align: center;
+  font-family: 'Rozha One', serif;
+`
+
+const SubTextSection2Wrapper = styled.div`
+  display: grid;
+  grid-row:4;
+  grid-column:2;
+  font-size: 0.8vw;
+  text-align: center;
+  font-family: 'Rozha One', serif;
+  align-items: end;
+`
+
+const ImageSection3Wrapper = styled.div`
+  display: grid;
+  grid-row:1;
+  grid-column:3;
+`
+
+const TextSection3Wrapper = styled.div`
+  display: grid;
+  grid-row:2;
+  grid-column:3;
+  font-size: 2vw;
+  text-align: center;
+  font-family: 'Rozha One', serif;
+`
+
+const SubTextSection3Wrapper = styled.div`
+  display: grid;
+  grid-row:3;
+  grid-column:3;
+  font-size: 0.8vw;
+  text-align: center;
+  font-family: 'Rozha One', serif;
+  align-items: end;
 `
 
 const OurServicesView = ({openInstagramLink}) => (
@@ -125,7 +198,33 @@ const OurServicesView = ({openInstagramLink}) => (
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper susci
     </TextContain2>
     <BackgroundWrapper>
-
+      <ImageSection1Wrapper>
+        <img style={{width: '7vw'}} src={n1Image} alt="n1Image" />
+      </ImageSection1Wrapper>
+      <TextSection1Wrapper>
+        SELECCIONA TU SERVICIO
+      </TextSection1Wrapper>
+      <SubTextSection1Wrapper>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+      </SubTextSection1Wrapper>
+      <ImageSection2Wrapper>
+        <img style={{width: '7vw'}} src={n2Image} alt="n2Image" />
+      </ImageSection2Wrapper>
+      <TextSection2Wrapper>
+        SELECCIONA TU SERVICIO
+      </TextSection2Wrapper>
+      <SubTextSection2Wrapper>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+      </SubTextSection2Wrapper>
+      <ImageSection3Wrapper>
+        <img style={{width: '7vw'}} src={n3Image} alt="n3Image" />
+      </ImageSection3Wrapper>
+      <TextSection3Wrapper>
+        SELECCIONA TU SERVICIO
+      </TextSection3Wrapper>
+      <SubTextSection3Wrapper>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+      </SubTextSection3Wrapper>
     </BackgroundWrapper>
 
   </Wrapper>
@@ -141,7 +240,7 @@ const OurServicesView = ({openInstagramLink}) => (
       Te hacemos unas uñikis perfectas, muy perfiladas y si no estás contento/a te devolvemos todo el dinero + 230€ en concepto de insatisfacción.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper susci
     </TextContain>
     <SubWrapper>
-      <img style={{width: '10rem', height: '10rem', margin:'auto'}} src={manicuraImage} alt="manicuraImage" />
+      <img  src={manicuraImage} alt="manicuraImage" />
       <img style={{width: '10rem', height: '10rem', margin:'auto'}} src={peinadosImage} alt="peinadosImage" />
       <img style={{width: '10rem', height: '10rem', margin:'auto'}} src={coloracionImage} alt="coloracionImage" />
       <img style={{width: '10rem', height: '10rem', margin:'auto'}} src={depilacionImage} alt="depilacionImage" />
