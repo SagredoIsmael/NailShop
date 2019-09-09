@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-row:3;
   grid-template-columns: 100%;
-  grid-template-rows: 8% 12% 20% 8% 12% 30%;
+  grid-template-rows: 10% 14% 22% 10% 14% 30%;
 `
 
 const Title1 = styled.h1`
@@ -226,61 +226,7 @@ const OurServicesView = ({openInstagramLink}) => (
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
       </SubTextSection3Wrapper>
     </BackgroundWrapper>
-
   </Wrapper>
 )
-
-
-/*const OurServicesView = ({openInstagramLink}) => (
-  <Wrapper>
-    <Title>
-      QUÉ OFRECEMOS
-    </Title>
-    <TextContain>
-      Te hacemos unas uñikis perfectas, muy perfiladas y si no estás contento/a te devolvemos todo el dinero + 230€ en concepto de insatisfacción.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper susci
-    </TextContain>
-    <SubWrapper>
-      <img  src={manicuraImage} alt="manicuraImage" />
-      <img style={{width: '10rem', height: '10rem', margin:'auto'}} src={peinadosImage} alt="peinadosImage" />
-      <img style={{width: '10rem', height: '10rem', margin:'auto'}} src={coloracionImage} alt="coloracionImage" />
-      <img style={{width: '10rem', height: '10rem', margin:'auto'}} src={depilacionImage} alt="depilacionImage" />
-    </SubWrapper>
-    <Title>
-      CÓMO
-    </Title>
-    <TextContain>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper susci
-    </TextContain>
-    <BackgroundWrapper>
-      <div style={{ margin:'auto', marginTop:'10rem', flexDirection: 'row', width:'20%'}}>
-        <img style={{width: '7rem', height: '7rem', marginLeft:'3rem'}} src={n1Image} alt="n1Image" />
-        <Title>
-          SELECCIONA TU SERVICIO
-        </Title>
-        <TextContainWithoutMargins>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        </TextContainWithoutMargins>
-      </div>
-      <div style={{ margin:'auto', marginTop:'15rem', flexDirection: 'row', width:'20%'}}>
-        <img style={{width: '7rem', height: '7rem', marginLeft:'3rem'}} src={n2Image} alt="n2Image" />
-        <Title>
-          DINOS CUÁNDO Y DÓNDE
-        </Title>
-        <TextContainWithoutMargins>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        </TextContainWithoutMargins>
-      </div>
-      <div style={{ margin:'auto', marginTop:'10rem', flexDirection: 'row', width:'20%'}}>
-        <img style={{width: '7rem', height: '7rem', marginLeft:'3rem'}} src={n3Image} alt="n3Image" />
-        <Title>
-          PAGA Y PUNTÚANOS
-        </Title>
-        <TextContainWithoutMargins>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        </TextContainWithoutMargins>
-      </div>
-    </BackgroundWrapper>
-  </Wrapper>
-)*/
 
 export default OurServicesView

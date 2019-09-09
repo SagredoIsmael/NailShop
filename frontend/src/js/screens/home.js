@@ -13,16 +13,7 @@ const Wrapper = styled.div`
   grid-template-columns: 18% 1fr 18%;
   grid-template-rows: 1fr;
   background: ${Colors.backgroundGrey};
-  height:490vh;
-`;
-
-const WrapperMobile = styled.div`
-  display: grid;
-  grid-template-columns: 18% 1fr 18%;
-  grid-template-rows: 1fr;
-  background: ${Colors.backgroundGrey};
-  height:140vh;
-
+  height: ${props => props.mobile ? "140vh" : "490vh"};
 `;
 
 const SubWrapper = styled.div`
@@ -30,7 +21,7 @@ const SubWrapper = styled.div`
   grid-column:2;
   background: white;
   grid-template-columns: 1fr;
-  grid-template-rows: 10% 20% 30% 20% 20%;
+  grid-template-rows: 10% 20% 30% 20% 5%;
 `;
 
 
@@ -45,17 +36,19 @@ export default class home extends React.Component {
               <HeaderView/>
               <SearchView/>
               <OurServicesView/>
+              <InstaView/>
             </SubWrapper>
           </Wrapper>
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1224}>
-          <WrapperMobile>
+          <Wrapper mobile>
             <SubWrapper>
               <HeaderView/>
               <SearchView/>
               <OurServicesView/>
+              <InstaView/>
             </SubWrapper>
-          </WrapperMobile>
+          </Wrapper>
         </MediaQuery>
       </div>
     )
