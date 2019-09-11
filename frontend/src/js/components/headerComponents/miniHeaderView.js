@@ -3,22 +3,20 @@ import styled from 'styled-components'
 import Colors from '../../utils/colors'
 import miniBackGroundImage from '../../../img/headerView/mini-header.png'
 
-const MiniWrapper = styled.div`
-  display: flex;
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
-  align-self: center;
-  align-items: center;
-  flex-direction: column;
+const Wrapper = styled.div`
+  display: grid;
+  grid-row:1;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
   background-image: url(${miniBackGroundImage});
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: initial;
-  z-index:1;
+  background-position: center center;
+  background-color: white;
 `
 
 export const MiniHeaderView = ({openInstagramLink}) => (
-  <MiniWrapper/>
+  <Wrapper/>
 )
 
 export default MiniHeaderView

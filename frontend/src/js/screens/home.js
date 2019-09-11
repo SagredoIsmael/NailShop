@@ -10,18 +10,25 @@ import FooterView from '../containers/headerContainers/footerContainer'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 18% 1fr 18%;
-  grid-template-rows: 1fr;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 80% 5%;
   background: ${Colors.backgroundGrey};
   height: ${props => props.mobile ? "150vh" : "490vh"};
 `;
 
-const SubWrapper = styled.div`
+const MarginsWrapper = styled.div`
+  display: grid;
+  grid-row:2;
+  grid-template-columns: 14.2% 1fr 13.6%;
+  grid-template-rows: 100%;
+`;
+
+const ComponentsWrapper = styled.div`
   display: grid;
   grid-column:2;
-  background: white;
-  grid-template-columns: 1fr;
-  grid-template-rows: 10% 20% 30% 20% 5%;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 40% 20% 20%;
+  background-color: white;
 `;
 
 
@@ -29,45 +36,31 @@ const Home = () => (
   <>
     <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>
       <Wrapper>
-        <SubWrapper>
-          <HeaderView/>
-          <SearchView/>
-          <OurServicesView/>
-          <InstaView/>
-        </SubWrapper>
+        <HeaderView/>
+        <MarginsWrapper>
+          <ComponentsWrapper>
+            <SearchView/>
+            <OurServicesView/>
+            <InstaView/>
+          </ComponentsWrapper>
+        </MarginsWrapper>
+        <FooterView/>
       </Wrapper>
     </MediaQuery>
     <MediaQuery maxDeviceWidth={1224}>
-      <Wrapper mobile>
-        <SubWrapper>
-          <HeaderView/>
+    <Wrapper mobile>
+      <HeaderView/>
+      <MarginsWrapper>
+        <ComponentsWrapper>
           <SearchView/>
           <OurServicesView/>
           <InstaView/>
-        </SubWrapper>
-      </Wrapper>
+        </ComponentsWrapper>
+      </MarginsWrapper>
+      <FooterView/>
+    </Wrapper>
     </MediaQuery>
   </>
 )
 
 export default Home
-
-  /*render() {
-    return (
-      <Container>
-        <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>
-          <SubWrapper>
-            <HeaderView/>
-            <SearchView/>
-            <OurServicesView/>
-            <InstaView/>
-            <FooterView/>
-          </SubWrapper>
-        </MediaQuery>
-        <MediaQuery maxDeviceWidth={1224}>
-          Esta página aún no está disponible en la versión móvil, estamos trabajando en ello...
-          Por favor abrela desde tu PC
-        </MediaQuery>
-      </Container>
-    )
-  }*/

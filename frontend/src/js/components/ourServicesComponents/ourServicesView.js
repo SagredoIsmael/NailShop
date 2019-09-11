@@ -13,9 +13,9 @@ import n3Image from '../../../img/ourServicesView/n3.png'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-row:3;
+  grid-row:2;
   grid-template-columns: 100%;
-  grid-template-rows: 10% 14% 22% 10% 14% 30%;
+  grid-template-rows: 10% 15% 18% 10% 15% 32%;
 `
 
 const Title = styled.h1`
@@ -59,6 +59,8 @@ const BackgroundWrapper = styled.div`
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 25% 25% 25% 25%;
   justify-items: center;
+  margin-left: 2vw;
+  margin-right: 2vw;
 `
 
 const ImageSectionWrapper = styled.div`
@@ -71,20 +73,14 @@ const TextSectionWrapper = styled.div`
   display: grid;
   grid-column: ${props => props.gridColumn};
   grid-row: ${props => props.gridRow};
-  font-size: 2vw;
+  font-size: ${props => props.fontSize};
   text-align: center;
   font-family: 'Rozha One', serif;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  align-content: center;
 `
 
-const SubTextSectionWrapper = styled.div`
-  display: grid;
-  grid-column: ${props => props.gridColumn};
-  grid-row: ${props => props.gridRow};
-  font-size: 0.8vw;
-  text-align: center;
-  font-family: 'Rozha One', serif;
-  align-items: end;
-`
 
 const OurServicesView = ({openInstagramLink}) => (
   <Wrapper>
@@ -118,30 +114,30 @@ const OurServicesView = ({openInstagramLink}) => (
       <ImageSectionWrapper gridRow="1" gridColumn="1">
         <img style={{width: '7vw'}} src={n1Image} alt="n1Image" />
       </ImageSectionWrapper>
-      <TextSectionWrapper gridRow="2" gridColumn="1">
+      <TextSectionWrapper gridRow="2" gridColumn="1" fontSize="2vw">
         SELECCIONA TU SERVICIO
       </TextSectionWrapper>
-      <SubTextSectionWrapper gridRow="3" gridColumn="1">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-      </SubTextSectionWrapper>
+      <TextSectionWrapper gridRow="3" gridColumn="1" fontSize="0.8vw">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+      </TextSectionWrapper>
       <ImageSectionWrapper gridRow="2" gridColumn="2">
         <img style={{width: '7vw'}} src={n2Image} alt="n2Image" />
       </ImageSectionWrapper>
-      <TextSectionWrapper gridRow="3" gridColumn="2">
-        SELECCIONA TU SERVICIO
+      <TextSectionWrapper gridRow="3" gridColumn="2" fontSize="2vw">
+        DINOS CUÁNDO Y DÓNDE
       </TextSectionWrapper>
-      <SubTextSectionWrapper gridRow="4" gridColumn="2">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-      </SubTextSectionWrapper>
+      <TextSectionWrapper gridRow="4" gridColumn="2" fontSize="0.8vw">
+        Lorem ipsum dolor sit amet, consectetuer
+      </TextSectionWrapper>
       <ImageSectionWrapper gridRow="1" gridColumn="3">
         <img style={{width: '7vw'}} src={n3Image} alt="n3Image" />
       </ImageSectionWrapper>
-      <TextSectionWrapper gridRow="2" gridColumn="3">
-        SELECCIONA TU SERVICIO
+      <TextSectionWrapper gridRow="2" gridColumn="3" fontSize="2vw">
+        PAGA Y PUNTÚANOS
       </TextSectionWrapper>
-      <SubTextSectionWrapper gridRow="3" gridColumn="3">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-      </SubTextSectionWrapper>
+      <TextSectionWrapper gridRow="3" gridColumn="3" fontSize="0.8vw">
+        Lorem ipsum dolor sit amet, consectetuer
+      </TextSectionWrapper>
     </BackgroundWrapper>
   </Wrapper>
 )

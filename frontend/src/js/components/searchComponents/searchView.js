@@ -12,13 +12,14 @@ import locationIcon from '../../../img/searchView/icon_location.jpg'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-row:2;
+  grid-row:1;
   grid-template-columns: 15% 70% 15%;
   grid-template-rows: 10% 55% 5%;
   background-image: url(${pinkBackGround});
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
+  background-color: white;
 `
 
 const InputDataWrapper = styled.div`

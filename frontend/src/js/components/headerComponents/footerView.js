@@ -4,18 +4,13 @@ import Colors from '../../utils/colors'
 import backGroundImage from '../../../img/footerView/footer.png'
 
 const Wrapper = styled.div`
-  display: flex;
-  width: -webkit-fill-available;
-  height: 13rem;
-  margin-top: 4rem;
-  align-self: center;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-row:3;
   background-image: url(${backGroundImage});
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: initial;
-  z-index:1;
+  background-position: center center;
+  background-color: white;
 `
 
 const FooterView = ({openInstagramLink}) => (

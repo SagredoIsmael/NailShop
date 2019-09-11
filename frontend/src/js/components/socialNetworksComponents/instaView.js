@@ -11,38 +11,29 @@ import image5 from '../../../img/instaView/da7cebbc4185d2395c7b3e3c6f3d1d6c.jpg'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-row:4;
+  grid-row:3;
   grid-template-rows: 10% 10% 70% 10%;
   align-items: center;
 `
 
-const ButtonWrapper = styled.button`
+const DefaultWrapper = styled.div`
+  display: grid;
+  grid-column: ${props => props.gridColumn};
+  grid-row: ${props => props.gridRow};
+  justify-content:center;
+  align-content:center;
+`
+
+const ButtonWrapper = styled.div`
   display: grid;
   grid-row: 2;
-  grid-template-columns: 20% 80%;
-`
-
-const LogoWrapper = styled.button`
-  display: grid;
-  grid-column: 1;
-`
-
-const TextWrapper = styled.button`
-  display: grid;
-  grid-column: 2;
-`
-
-const GridWrapper = styled.div`
-  display: grid;
-  grid-row: 3;
-  align-self:start;
+  grid-template-columns: 30% 70%;
 `
 
 const Title = styled.h1`
-  font-size: 1.5rem;
+  font-size: 1vw;
   text-align: center;
   font-family: 'Rozha One', serif;
-  margin: 0.5rem;
 `
 
 const tileData = [
@@ -74,35 +65,22 @@ const tileData = [
 
 const InstaView = ({openInstagramLink}) => (
   <Wrapper>
-    <ButtonWrapper>
-      <button style={{cursor: "pointer", border:"none", outline:"none", backgroundColor: "white"}} onClick={(e) => openInstagramLink()}>
-          <LogoWrapper>
-            <img style={{width: '1vw'}} src={instaLogo} alt="instaLogo" />
-          </LogoWrapper>
-          <TextWrapper>
-            @orgasmi_official
-          </TextWrapper>
+    <DefaultWrapper gridRow="2">
+      <button style={{display: "grid", gridRowStart: "1", gridRowEnd:"2", cursor: "pointer", border:"none", outline:"none", backgroundColor: "white"}} onClick={(e) => openInstagramLink()}>
+          <ButtonWrapper>
+            <DefaultWrapper gridColumn="1">
+              <img style={{width: '2.5vw'}} src={instaLogo} alt="instaLogo" />
+            </DefaultWrapper>
+            <Title gridColumn="3">
+              @orgasmi_official
+            </Title>
+          </ButtonWrapper>
       </button>
-    </ButtonWrapper>
-    <GridWrapper>
+    </DefaultWrapper>
+    <DefaultWrapper gridRow="3">
       <GridImages images={tileData}/>
-    </GridWrapper>
+    </DefaultWrapper>
   </Wrapper>
 )
-
-/*const InstaView = ({openInstagramLink}) => (
-  <div style={{alignSelf:"center", display: "flex", alignItems:"center", flexDirection:"column", zIndex:3, marginTop:'-12rem'}}>
-    <button style={{cursor: "pointer", border:"none", display: "flex", alignItems:"center", flexDirection:"column", outline:"none", backgroundColor: "white"}} onClick={(e) => openInstagramLink()}>
-        <SubWrapper>
-          <img style={{width: '2rem', height: '2rem', margin:'auto'}} src={instaLogo} alt="instaLogo" />
-          <Title>
-            @orgasmi_official
-          </Title>
-        </SubWrapper>
-      </button>
-      <GridImages images={tileData}/>
-      <SimpleButton text="¡SÍGUENOS!" style={{display:'flex', marginTop: '4rem'}} onClick={() => openInstagramLink()}/>
-  </div>
-)*/
 
 export default InstaView
