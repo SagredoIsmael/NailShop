@@ -18,17 +18,17 @@ const Wrapper = styled.div`
   grid-template-rows: 10% 14% 22% 10% 14% 30%;
 `
 
-const Title1 = styled.h1`
+const Title = styled.h1`
   display: grid;
-  grid-row:1;
+  grid-row: ${props => props.gridRow};
   font-size: 2vw;
   text-align: center;
   font-family: 'Rozha One', serif;
 `
 
-const TextContain1 = styled.h1`
+const TextContain = styled.h1`
   display: grid;
-  grid-row:2;
+  grid-row: ${props => props.gridRow};
   font-size: 1vw;
   text-align: center;
   font-family: 'Rozha One', serif;
@@ -44,42 +44,9 @@ const ImagesWrapper = styled.div`
   align-items:center;
 `
 
-const Image1Wrapper = styled.div`
+const Image = styled.div`
   display: grid;
-  grid-column:2;
-`
-
-const Image2Wrapper = styled.div`
-  display: grid;
-  grid-column:3;
-`
-
-const Image3Wrapper = styled.div`
-  display: grid;
-  grid-column:4;
-`
-
-const Image4Wrapper = styled.div`
-  display: grid;
-  grid-column:5;
-`
-
-const Title2 = styled.h1`
-  display: grid;
-  grid-row:4;
-  font-size: 2vw;
-  text-align: center;
-  font-family: 'Rozha One', serif;
-`
-
-const TextContain2 = styled.h1`
-  display: grid;
-  grid-row:5;
-  font-size: 1vw;
-  text-align: center;
-  font-family: 'Rozha One', serif;
-  margin-left: 4vw;
-  margin-right: 4vw;
+  grid-column: ${props => props.gridColumn};
 `
 
 const BackgroundWrapper = styled.div`
@@ -94,75 +61,25 @@ const BackgroundWrapper = styled.div`
   justify-items: center;
 `
 
-const ImageSection1Wrapper = styled.div`
+const ImageSectionWrapper = styled.div`
   display: grid;
-  grid-row:1;
-  grid-column:1;
+  grid-column: ${props => props.gridColumn};
+  grid-row: ${props => props.gridRow};
 `
 
-const TextSection1Wrapper = styled.div`
+const TextSectionWrapper = styled.div`
   display: grid;
-  grid-row:2;
-  grid-column:1;
+  grid-column: ${props => props.gridColumn};
+  grid-row: ${props => props.gridRow};
   font-size: 2vw;
   text-align: center;
   font-family: 'Rozha One', serif;
 `
 
-const SubTextSection1Wrapper = styled.div`
+const SubTextSectionWrapper = styled.div`
   display: grid;
-  grid-row:3;
-  grid-column:1;
-  font-size: 0.8vw;
-  text-align: center;
-  font-family: 'Rozha One', serif;
-  align-items: end;
-`
-
-const ImageSection2Wrapper = styled.div`
-  display: grid;
-  grid-row:2;
-  grid-column:2;
-`
-
-const TextSection2Wrapper = styled.div`
-  display: grid;
-  grid-row:3;
-  grid-column:2;
-  font-size: 2vw;
-  text-align: center;
-  font-family: 'Rozha One', serif;
-`
-
-const SubTextSection2Wrapper = styled.div`
-  display: grid;
-  grid-row:4;
-  grid-column:2;
-  font-size: 0.8vw;
-  text-align: center;
-  font-family: 'Rozha One', serif;
-  align-items: end;
-`
-
-const ImageSection3Wrapper = styled.div`
-  display: grid;
-  grid-row:1;
-  grid-column:3;
-`
-
-const TextSection3Wrapper = styled.div`
-  display: grid;
-  grid-row:2;
-  grid-column:3;
-  font-size: 2vw;
-  text-align: center;
-  font-family: 'Rozha One', serif;
-`
-
-const SubTextSection3Wrapper = styled.div`
-  display: grid;
-  grid-row:3;
-  grid-column:3;
+  grid-column: ${props => props.gridColumn};
+  grid-row: ${props => props.gridRow};
   font-size: 0.8vw;
   text-align: center;
   font-family: 'Rozha One', serif;
@@ -171,60 +88,60 @@ const SubTextSection3Wrapper = styled.div`
 
 const OurServicesView = ({openInstagramLink}) => (
   <Wrapper>
-    <Title1>
+    <Title gridRow="1">
       QUÉ OFRECEMOS
-    </Title1>
-    <TextContain1>
+    </Title>
+    <TextContain gridRow="2">
       Te hacemos unas uñikis perfectas, muy perfiladas y si no estás contento/a te devolvemos todo el dinero + 230€ en concepto de insatisfacción.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper susci
-    </TextContain1>
+    </TextContain>
     <ImagesWrapper>
-      <Image1Wrapper>
+      <Image gridColumn="2">
         <img style={{width: '9vw'}} src={manicuraImage} alt="manicuraImage" />
-      </Image1Wrapper>
-      <Image2Wrapper>
+      </Image>
+      <Image gridColumn="3">
         <img style={{width: '9vw'}} src={peinadosImage} alt="peinadosImage" />
-      </Image2Wrapper>
-      <Image3Wrapper>
+      </Image>
+      <Image gridColumn="4">
         <img style={{width: '9vw'}} src={coloracionImage} alt="coloracionImage" />
-      </Image3Wrapper>
-      <Image4Wrapper>
+      </Image>
+      <Image gridColumn="5">
         <img style={{width: '9vw'}} src={depilacionImage} alt="depilacionImage" />
-      </Image4Wrapper>
+      </Image>
     </ImagesWrapper>
-    <Title2>
+    <Title gridRow="4">
       CÓMO
-    </Title2>
-    <TextContain2>
+    </Title>
+    <TextContain gridRow="5">
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper susci
-    </TextContain2>
+    </TextContain>
     <BackgroundWrapper>
-      <ImageSection1Wrapper>
+      <ImageSectionWrapper gridRow="1" gridColumn="1">
         <img style={{width: '7vw'}} src={n1Image} alt="n1Image" />
-      </ImageSection1Wrapper>
-      <TextSection1Wrapper>
+      </ImageSectionWrapper>
+      <TextSectionWrapper gridRow="2" gridColumn="1">
         SELECCIONA TU SERVICIO
-      </TextSection1Wrapper>
-      <SubTextSection1Wrapper>
+      </TextSectionWrapper>
+      <SubTextSectionWrapper gridRow="3" gridColumn="1">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-      </SubTextSection1Wrapper>
-      <ImageSection2Wrapper>
+      </SubTextSectionWrapper>
+      <ImageSectionWrapper gridRow="2" gridColumn="2">
         <img style={{width: '7vw'}} src={n2Image} alt="n2Image" />
-      </ImageSection2Wrapper>
-      <TextSection2Wrapper>
+      </ImageSectionWrapper>
+      <TextSectionWrapper gridRow="3" gridColumn="2">
         SELECCIONA TU SERVICIO
-      </TextSection2Wrapper>
-      <SubTextSection2Wrapper>
+      </TextSectionWrapper>
+      <SubTextSectionWrapper gridRow="4" gridColumn="2">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-      </SubTextSection2Wrapper>
-      <ImageSection3Wrapper>
+      </SubTextSectionWrapper>
+      <ImageSectionWrapper gridRow="1" gridColumn="3">
         <img style={{width: '7vw'}} src={n3Image} alt="n3Image" />
-      </ImageSection3Wrapper>
-      <TextSection3Wrapper>
+      </ImageSectionWrapper>
+      <TextSectionWrapper gridRow="2" gridColumn="3">
         SELECCIONA TU SERVICIO
-      </TextSection3Wrapper>
-      <SubTextSection3Wrapper>
+      </TextSectionWrapper>
+      <SubTextSectionWrapper gridRow="3" gridColumn="3">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-      </SubTextSection3Wrapper>
+      </SubTextSectionWrapper>
     </BackgroundWrapper>
   </Wrapper>
 )

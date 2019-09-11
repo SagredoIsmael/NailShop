@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   grid-template-columns: 18% 1fr 18%;
   grid-template-rows: 1fr;
   background: ${Colors.backgroundGrey};
-  height: ${props => props.mobile ? "140vh" : "490vh"};
+  height: ${props => props.mobile ? "150vh" : "490vh"};
 `;
 
 const SubWrapper = styled.div`
@@ -25,34 +25,32 @@ const SubWrapper = styled.div`
 `;
 
 
-export default class home extends React.Component {
+const Home = () => (
+  <>
+    <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>
+      <Wrapper>
+        <SubWrapper>
+          <HeaderView/>
+          <SearchView/>
+          <OurServicesView/>
+          <InstaView/>
+        </SubWrapper>
+      </Wrapper>
+    </MediaQuery>
+    <MediaQuery maxDeviceWidth={1224}>
+      <Wrapper mobile>
+        <SubWrapper>
+          <HeaderView/>
+          <SearchView/>
+          <OurServicesView/>
+          <InstaView/>
+        </SubWrapper>
+      </Wrapper>
+    </MediaQuery>
+  </>
+)
 
-  render() {
-    return (
-      <div>
-        <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>
-          <Wrapper>
-            <SubWrapper>
-              <HeaderView/>
-              <SearchView/>
-              <OurServicesView/>
-              <InstaView/>
-            </SubWrapper>
-          </Wrapper>
-        </MediaQuery>
-        <MediaQuery maxDeviceWidth={1224}>
-          <Wrapper mobile>
-            <SubWrapper>
-              <HeaderView/>
-              <SearchView/>
-              <OurServicesView/>
-              <InstaView/>
-            </SubWrapper>
-          </Wrapper>
-        </MediaQuery>
-      </div>
-    )
-  }
+export default Home
 
   /*render() {
     return (
@@ -73,5 +71,3 @@ export default class home extends React.Component {
       </Container>
     )
   }*/
-
-}

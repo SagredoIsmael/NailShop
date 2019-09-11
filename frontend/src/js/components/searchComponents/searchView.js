@@ -56,26 +56,11 @@ const TextFieldsUpWrapper = styled.div`
   grid-template-rows: 100%;
 `
 
-const TextFieldServiceWrapper = styled.div`
+const DefaultWrapper = styled.div`
   display: grid;
-  grid-column:2;
-`
-
-const TextFieldPostalCodeWrapper = styled.div`
-  display: grid;
-  grid-column:3;
-`
-
-const TextFieldDateWrapper = styled.div`
-  display: grid;
-  grid-row:4;
+  grid-column: ${props => props.gridColumn};
+  grid-row: ${props => props.gridRow};
   justify-content:center;
-`
-
-const BookearButton = styled.div`
-  display: grid;
-  grid-row:3;
-  grid-column:2;
 `
 
 const SearchView = ({setServiceSearch, setPostalCodeSearch, setDateSearch, serviceTypeSearch, postalCodeSearch, dateSearch}) => (
@@ -86,23 +71,23 @@ const SearchView = ({setServiceSearch, setPostalCodeSearch, setDateSearch, servi
       </Title>
       <TextFieldsWrapper>
         <TextFieldsUpWrapper>
-          <TextFieldServiceWrapper>
+          <DefaultWrapper gridColumn="2">
               <TextFieldDownshift placeholder = "Escoge tu tratamiento" style={{width: '15vw', margin:'1vw'}} icon={nailPolishIcon} onChange={() => console.log('@@@@@@@change')}/>
-          </TextFieldServiceWrapper>
-          <TextFieldPostalCodeWrapper>
+          </DefaultWrapper>
+          <DefaultWrapper gridColumn="3">
             <TextfieldOutline placeholder = "Código postal" style={{width: '15vw', margin:'1vw'}} icon={locationIcon} onChange={(e) => setPostalCodeSearch(e)}/>
-          </TextFieldPostalCodeWrapper>
+          </DefaultWrapper>
         </TextFieldsUpWrapper>
-        <TextFieldDateWrapper>
+        <DefaultWrapper gridRow="4">
           <TextfieldOutline placeholder = "Fecha y hora" style={{width: '15vw', margin:'1vw'}} icon={calendarIcon} onChange={(e) => setDateSearch(e)}/>
-        </TextFieldDateWrapper>
+        </DefaultWrapper>
       </TextFieldsWrapper>
     </InputDataWrapper>
-    <BookearButton>
+    <DefaultWrapper gridColumn="2" gridRow="3">
       <Link to="/professionals" style={{ textDecoration: 'none', justifySelf: 'center' }}>
         <SimpleButton text="BOOKEAR" style={{width: '8vw', height: '2.5vw', fontSize: '1vw', padding:'inherit'}} onClick={() => null}/>
       </Link>
-    </BookearButton>
+    </DefaultWrapper>
   </Wrapper>
 )
 
