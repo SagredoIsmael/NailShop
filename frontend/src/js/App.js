@@ -16,7 +16,7 @@ function App() {
         <div>
           <Redirect
             from="/"
-            to="/professionals" />
+            to="/home" />
           <Switch>
             <Route
               path="/home"
