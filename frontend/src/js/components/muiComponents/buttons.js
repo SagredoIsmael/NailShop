@@ -17,7 +17,6 @@ const ColorButton = withStyles(theme => ({
 }))(Button)
 
 export const SimpleButton = ({text, style, onClick}) => {
-  const classes = useStyles()
   return (
     <ColorButton variant="contained" color="primary" style={style} onClick={e => onClick()}>
       {text}

@@ -25,7 +25,7 @@ const Home = () => (
         <SearchView/>
         <OurServicesView/>
         <InstaView/>
-        <FooterView/>
+        <FooterView gridRow="7"/>
       </Wrapper>
     </MediaQuery>
     <MediaQuery maxDeviceWidth={1224}>
@@ -34,7 +34,7 @@ const Home = () => (
         <SearchView/>
         <OurServicesView/>
         <InstaView/>
-        <FooterView/>
+        <FooterView gridRow="7"/>
       </Wrapper>
     </MediaQuery>
   </>

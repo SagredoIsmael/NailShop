@@ -5,7 +5,7 @@ import backGroundImage from '../../../img/footerView/footer.png'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-row:7;
+  grid-row: ${props => props.gridRow};
   background-image: url(${backGroundImage});
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,8 +13,8 @@ const Wrapper = styled.div`
   background-color: white;
 `
 
-const FooterView = ({openInstagramLink}) => (
-  <Wrapper/>
+const FooterView = ({gridRow}) => (
+  <Wrapper gridRow={gridRow}/>
 )
 
 export default FooterView
