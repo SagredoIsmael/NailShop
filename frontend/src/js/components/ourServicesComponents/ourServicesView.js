@@ -13,7 +13,7 @@ import n3Image from '../../../img/ourServicesView/n3.png'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-row:2;
+  grid-row:3;
   grid-template-columns: 100%;
   grid-template-rows: 10% 15% 18% 10% 15% 32%;
 `
@@ -41,7 +41,7 @@ const ImagesWrapper = styled.div`
   grid-row:3;
   grid-template-columns: 10% 20% 20% 20% 20% 10%;
   grid-template-rows: 100%;
-  align-items:center;
+  justify-items:center;
 `
 
 const Image = styled.div`
@@ -118,7 +118,7 @@ const OurServicesView = ({openInstagramLink}) => (
         SELECCIONA TU SERVICIO
       </TextSectionWrapper>
       <TextSectionWrapper gridRow="3" gridColumn="1" fontSize="0.8vw">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
       </TextSectionWrapper>
       <ImageSectionWrapper gridRow="2" gridColumn="2">
         <img style={{width: '7vw'}} src={n2Image} alt="n2Image" />

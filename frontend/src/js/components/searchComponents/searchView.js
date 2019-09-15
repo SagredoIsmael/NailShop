@@ -12,7 +12,7 @@ import locationIcon from '../../../img/searchView/icon_location.jpg'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-row:1;
+  grid-row:2;
   grid-template-columns: 15% 70% 15%;
   grid-template-rows: 10% 55% 5%;
   background-image: url(${pinkBackGround});
@@ -73,14 +73,14 @@ const SearchView = ({setServiceSearch, setPostalCodeSearch, setDateSearch, servi
       <TextFieldsWrapper>
         <TextFieldsUpWrapper>
           <DefaultWrapper gridColumn="2">
-              <TextFieldDownshift placeholder = "Escoge tu tratamiento" style={{width: '15vw', margin:'1vw'}} icon={nailPolishIcon} onChange={() => console.log('@@@@@@@change')}/>
+              <TextFieldDownshift placeholder = "Escoge tu tratamiento" style={{width: '25vw', margin:'1vw'}} icon={nailPolishIcon} onChange={() => console.log('@@@@@@@change')}/>
           </DefaultWrapper>
           <DefaultWrapper gridColumn="3">
-            <TextfieldOutline placeholder = "Código postal" style={{width: '15vw', margin:'1vw'}} icon={locationIcon} onChange={(e) => setPostalCodeSearch(e)}/>
+            <TextfieldOutline placeholder = "Código postal" style={{width: '25vw', margin:'1vw'}} icon={locationIcon} onChange={(e) => setPostalCodeSearch(e)}/>
           </DefaultWrapper>
         </TextFieldsUpWrapper>
         <DefaultWrapper gridRow="4">
-          <TextfieldOutline placeholder = "Fecha y hora" style={{width: '15vw', margin:'1vw'}} icon={calendarIcon} onChange={(e) => setDateSearch(e)}/>
+          <TextfieldOutline placeholder = "Fecha y hora" style={{width: '25vw', margin:'1vw'}} icon={calendarIcon} onChange={(e) => setDateSearch(e)}/>
         </DefaultWrapper>
       </TextFieldsWrapper>
     </InputDataWrapper>

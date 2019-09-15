@@ -11,8 +11,9 @@ import image5 from '../../../img/instaView/da7cebbc4185d2395c7b3e3c6f3d1d6c.jpg'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-row:3;
+  grid-row:4;
   grid-template-rows: 10% 10% 70% 10%;
+  grid-template-columns: 8% 84% 8%;
   align-items: center;
 `
 
@@ -65,7 +66,7 @@ const tileData = [
 
 const InstaView = ({openInstagramLink}) => (
   <Wrapper>
-    <DefaultWrapper gridRow="2">
+    <DefaultWrapper gridRow="2" gridColumn="2">
       <button style={{display: "grid", gridRowStart: "1", gridRowEnd:"2", cursor: "pointer", border:"none", outline:"none", backgroundColor: "white"}} onClick={(e) => openInstagramLink()}>
           <ButtonWrapper>
             <DefaultWrapper gridColumn="1">
@@ -77,7 +78,7 @@ const InstaView = ({openInstagramLink}) => (
           </ButtonWrapper>
       </button>
     </DefaultWrapper>
-    <DefaultWrapper gridRow="3">
+    <DefaultWrapper gridRow="3" gridColumn="2">
       <GridImages images={tileData}/>
     </DefaultWrapper>
   </Wrapper>

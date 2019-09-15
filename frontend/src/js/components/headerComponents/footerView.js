@@ -5,7 +5,7 @@ import backGroundImage from '../../../img/footerView/footer.png'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-row:3;
+  grid-row:7;
   background-image: url(${backGroundImage});
   background-size: cover;
   background-repeat: no-repeat;

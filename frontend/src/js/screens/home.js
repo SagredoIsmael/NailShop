@@ -11,24 +11,9 @@ import FooterView from '../containers/headerContainers/footerContainer'
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 15% 80% 5%;
-  background: ${Colors.backgroundGrey};
+  grid-template-rows: 15% 20% 30% 20% 20% 10% 5%;
+  background: white;
   height: ${props => props.mobile ? "150vh" : "490vh"};
-`;
-
-const MarginsWrapper = styled.div`
-  display: grid;
-  grid-row:2;
-  grid-template-columns: 14.2% 1fr 13.6%;
-  grid-template-rows: 100%;
-`;
-
-const ComponentsWrapper = styled.div`
-  display: grid;
-  grid-column:2;
-  grid-template-columns: 100%;
-  grid-template-rows: 20% 40% 20% 20%;
-  background-color: white;
 `;
 
 
@@ -37,28 +22,20 @@ const Home = () => (
     <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>
       <Wrapper>
         <HeaderView/>
-        <MarginsWrapper>
-          <ComponentsWrapper>
-            <SearchView/>
-            <OurServicesView/>
-            <InstaView/>
-          </ComponentsWrapper>
-        </MarginsWrapper>
+        <SearchView/>
+        <OurServicesView/>
+        <InstaView/>
         <FooterView/>
       </Wrapper>
     </MediaQuery>
     <MediaQuery maxDeviceWidth={1224}>
-    <Wrapper mobile>
-      <HeaderView/>
-      <MarginsWrapper>
-        <ComponentsWrapper>
-          <SearchView/>
-          <OurServicesView/>
-          <InstaView/>
-        </ComponentsWrapper>
-      </MarginsWrapper>
-      <FooterView/>
-    </Wrapper>
+      <Wrapper mobile>
+        <HeaderView/>
+        <SearchView/>
+        <OurServicesView/>
+        <InstaView/>
+        <FooterView/>
+      </Wrapper>
     </MediaQuery>
   </>
 )

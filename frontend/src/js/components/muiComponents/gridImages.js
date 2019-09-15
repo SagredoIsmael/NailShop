@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
   gridList: {
     display: 'flex',
-    width: "50vw",
+    width: "100vw",
     height: "26vw",
   },
 }))
