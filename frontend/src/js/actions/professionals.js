@@ -1,4 +1,6 @@
 import { REQUEST_FETCH_PROFESSIONALS, SUCCESS_FETCH_PROFESSIONALS, ERROR_FETCH_PROFESSIONALS } from './types'
+import Constants from '../utils/globalConstants'
+
 
 export const requestFetchProfessionals = () => {
   return {
@@ -22,7 +24,7 @@ export const errorFetchProfessionals = (professionals) => {
 
 export const fetchProfessionals = () => (dispatch, getState) =>  {
   dispatch(requestFetchProfessionals())
-  fetch("http://85.208.21.71/api/professionals/")
+  fetch(Constants.urlServer + Constants.urlProfessionals)
     .then(handleErrors)
     .then(res => res.json())
     .then(json => {
