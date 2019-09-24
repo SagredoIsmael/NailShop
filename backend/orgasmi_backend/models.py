@@ -99,7 +99,7 @@ class Service(models.Model):
 
     short_description = models.TextField("Short Description",blank=True)
 
-    description = models.TextField("Description"blank=True)
+    description = models.TextField("Description",blank=True)
 
     duration_in_weeks = models.IntegerField("Duration of service in weeks", default=2)
 
