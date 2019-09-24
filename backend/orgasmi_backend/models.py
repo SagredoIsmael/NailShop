@@ -109,9 +109,9 @@ class Service(models.Model):
 
     macro_category = models.ForeignKey(ServiceMacroCategory,on_delete=models.PROTECT)
 
-    tags = ManyToManyField("Tag", related_name="service_tags", blank=True)
+    tags = models.ManyToManyField("Tag", related_name="service_tags", blank=True)
 
-    tips = ManyToManyField("Tip", related_name="service_tips", blank=True)
+    tips = models.ManyToManyField("Tip", related_name="service_tips", blank=True)
 
     category = models.ForeignKey(ServiceCategory,on_delete=models.PROTECT)
 
