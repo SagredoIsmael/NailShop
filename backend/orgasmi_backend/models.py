@@ -61,14 +61,59 @@ class Professional(models.Model):
     def __str__(self):  
         return self.name
 
+class Tag(models.Model):
+
+    description = models.TextField("Tag description")
+
+    def __str__(self):
+        return self.name
+
+class Tip(models.Model):
+
+    name = models.CharField("Tip name",max_length=120)
+    
+    description = models.TextField("Tag description")
+
+    def __str__(self):
+        return self.name
+
+class ServiceMacroCategory(models.Model):
+
+    name = models.CharField("Macro Category Name",max_length=120)
+
+    def __str__(self):
+        return self.name
+
+class ServiceCategory(models.Model):
+
+    name = models.CharField("Category Name",max_length=120)
+
+    def __str__(self):
+        return self.name
+
+
 
 class Service(models.Model):
 
-    name = models.CharField("Name",max_length=120)
+    name = models.CharField("Name of the service",max_length=240)
+
+    short_description = models.TextField("Short Description")
 
     description = models.TextField("Description")
 
+    duration_in_weeks = model.IntegerField("Duration of service in weeks", default=2)
+
+    execution_time_in_hours = models.FloatField(default=0.0)
+
     price = models.FloatField(default=0.0)
+
+    macro_category = models.ForeignKey(ServiceMacroCategory,on_delete=models.PROTECT)
+
+    tags = ManyToManyField("Tag", related_name="service_tags", blank=True)
+
+    tips = ManyToManyField("Tip", related_name="service_tips", blank=True)
+
+    category = models.ForeignKey(ServiceCategory,on_delete=models.PROTECT)
 
     class Meta:
         verbose_name = "Service"
