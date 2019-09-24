@@ -101,7 +101,7 @@ class Service(models.Model):
 
     description = models.TextField("Description")
 
-    duration_in_weeks = model.IntegerField("Duration of service in weeks", default=2)
+    duration_in_weeks = models.IntegerField("Duration of service in weeks", default=2)
 
     execution_time_in_hours = models.FloatField(default=0.0)
 
