@@ -9,14 +9,13 @@ import calendarIcon from '../../../img/searchView/icon_calendar.jpg'
 import nailPolishIcon from '../../../img/searchView/icon_nail_polish.jpg'
 import locationIcon from '../../../img/searchView/icon_location.jpg'
 
-
 const Wrapper = styled.div`
   display: grid;
   grid-row:2;
   grid-template-columns: 15% 70% 15%;
-  grid-template-rows: 10% 55% 5%;
+  grid-template-rows: 20% 30% 7% 40%;
   background-image: url(${pinkBackGround});
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: white;
@@ -38,7 +37,7 @@ const InputDataWrapper = styled.div`
 const Title = styled.h1`
   display: grid;
   grid-row:2;
-  font-size: 2vw;
+  font-size: 2.5vw;
   text-align: center;
   font-family: 'Rozha One', serif;
 `
@@ -47,7 +46,7 @@ const TextFieldsWrapper = styled.div`
   display: grid;
   grid-row:3;
   grid-template-columns: 100%;
-  grid-template-rows: 10% 35% 10% 35% 10%;
+  grid-template-rows: 10% 80% 10%;
 `
 
 const TextFieldsUpWrapper = styled.div`
@@ -68,7 +67,7 @@ const SearchView = ({setServiceSearch, setPostalCodeSearch, setDateSearch, servi
   <Wrapper>
     <InputDataWrapper>
       <Title>
-        DINOS QUÉ, CUÁNDO Y DÓNDE
+        DINOS QUÉ Y DÓNDE
       </Title>
       <TextFieldsWrapper>
         <TextFieldsUpWrapper>
@@ -79,14 +78,11 @@ const SearchView = ({setServiceSearch, setPostalCodeSearch, setDateSearch, servi
             <TextfieldOutline placeholder = "Código postal" style={{width: '25vw', margin:'1vw'}} icon={locationIcon} onChange={(e) => setPostalCodeSearch(e)}/>
           </DefaultWrapper>
         </TextFieldsUpWrapper>
-        <DefaultWrapper gridRow="4">
-          <TextfieldOutline placeholder = "Fecha y hora" style={{width: '25vw', margin:'1vw'}} icon={calendarIcon} onChange={(e) => setDateSearch(e)}/>
-        </DefaultWrapper>
       </TextFieldsWrapper>
     </InputDataWrapper>
-    <DefaultWrapper gridColumn="2" gridRow="3">
+    <DefaultWrapper gridColumn="2" gridRow="4">
       <Link to="/professionals" style={{ textDecoration: 'none', justifySelf: 'center' }}>
-        <SimpleButton text="BOOKEAR" style={{width: '8vw', height: '2.5vw', fontSize: '1vw', padding:'inherit'}} onClick={() => null}/>
+        <SimpleButton text="BOOKEAR" style={{width: '15vw', height: '4.60vw', fontSize: '1.3vw', padding:'inherit'}} onClick={() => null}/>
       </Link>
     </DefaultWrapper>
   </Wrapper>

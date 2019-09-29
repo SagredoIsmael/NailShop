@@ -9,10 +9,11 @@ const Wrapper = styled.div`
   grid-template-columns: 100%;
   grid-template-rows: 100%;
   background-image: url(${backGroundImage});
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: white;
+  z-index:1;
 `
 
 const HeaderView = ({openInstagramLink}) => (

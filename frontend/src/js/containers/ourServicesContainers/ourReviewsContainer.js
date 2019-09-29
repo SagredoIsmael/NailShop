@@ -1,0 +1,19 @@
+import { connect } from 'react-redux'
+import { openInstagramLink } from '../../actions/UI'
+import OurReviewsView from '../../components/ourServicesComponents/ourReviewsView'
+
+const mapStateToProps = state => {
+  return {test:state}
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    openInstagramLink: () => {
+      dispatch(openInstagramLink())
+    },
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps)(OurReviewsView)

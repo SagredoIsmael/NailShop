@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     right: 0,
   },
   resize:{
-    fontSize:'0.8vw',
+    fontSize:'1.2vw',
   },
 }))
 
@@ -50,11 +50,11 @@ export const TextfieldOutline = ({label, placeholder, style, icon, onChange}) =>
               input: classes.resize,
             },
             style: {
-              height: '3vw'
+              height: '6vw'
             },
           startAdornment: icon? (
             <InputAdornment position="start">
-              <img src={icon} alt="icon" style={{width:'1.5vw', padding:'1vw'}} />
+              <img src={icon} alt="icon" style={{width:'3vw', padding:'1vw'}} />
             </InputAdornment>
           ) : null
         }}
@@ -73,12 +73,12 @@ const renderInput = (inputProps) => {
             input: classes.resize,
           },
         style: {
-          height: '3vw'
+          height: '6vw'
         },
         ...InputProps,
         startAdornment: icon? (
           <InputAdornment position="start">
-            <img src={icon} alt="icon" style={{width:'1.5vw', padding:'1vw'}} />
+            <img src={icon} alt="icon" style={{width:'3vw', padding:'1vw'}} />
           </InputAdornment>
         ) : null
       }}

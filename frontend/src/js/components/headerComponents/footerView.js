@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   background-image: url(${backGroundImage});
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-color: white;
 `
 

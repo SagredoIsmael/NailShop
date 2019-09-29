@@ -2,18 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import Colors from '../utils/colors'
 import MediaQuery from 'react-responsive'
-import HeaderView from '../containers/headerContainers/headerContainer'
-import SearchView from '../containers/searchContainers/searchViewContainer'
-import OurServicesView from '../containers/ourServicesContainers/ourServicesContainer'
-import InstaView from '../containers/socialNetworksContainers/instaContainer'
-import FooterView from '../containers/headerContainers/footerContainer'
+import Header from '../containers/headerContainers/headerContainer'
+import Search from '../containers/searchContainers/searchViewContainer'
+import OurServices from '../containers/ourServicesContainers/ourServicesContainer'
+import OurTeam from '../containers/ourServicesContainers/ourTeamContainer'
+import OurReviews from '../containers/ourServicesContainers/ourReviewsContainer'
+import Insta from '../containers/socialNetworksContainers/instaContainer'
+import Footer from '../containers/headerContainers/footerContainer'
 
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 15% 20% 30% 20% 20% 10% 5%;
+  grid-template-rows: 14% 20% 37% 20% 20% 5%;
   background: white;
-  height: ${props => props.mobile ? "150vh" : "490vh"};
+  height: ${props => props.mobile ? "150vh" : "470vh"};
 `;
 
 
@@ -21,20 +23,22 @@ const Home = () => (
   <>
     <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>
       <Wrapper>
-        <HeaderView/>
-        <SearchView/>
-        <OurServicesView/>
-        <InstaView/>
-        <FooterView gridRow="7"/>
+        <Header/>
+        <Search/>
+        <OurServices/>
+        <OurReviews/>
+        <OurTeam/>
+        <Footer gridRow="6"/>
       </Wrapper>
     </MediaQuery>
     <MediaQuery maxDeviceWidth={1224}>
       <Wrapper mobile>
-        <HeaderView/>
-        <SearchView/>
-        <OurServicesView/>
-        <InstaView/>
-        <FooterView gridRow="7"/>
+        <Header/>
+        <Search/>
+        <OurServices/>
+        <OurReviews/>
+        <OurTeam/>
+        <Footer gridRow="6"/>
       </Wrapper>
     </MediaQuery>
   </>
