@@ -66,7 +66,7 @@ class Tag(models.Model):
     description = models.TextField("Tag description")
 
     def __str__(self):
-        return self.name
+        return self.description
 
 class Tip(models.Model):
 
@@ -97,9 +97,9 @@ class Service(models.Model):
 
     name = models.CharField("Name of the service",max_length=240)
 
-    short_description = models.TextField("Short Description")
+    short_description = models.TextField("Short Description",blank=True)
 
-    description = models.TextField("Description")
+    description = models.TextField("Description",blank=True)
 
     duration_in_weeks = models.IntegerField("Duration of service in weeks", default=2)
 
@@ -107,13 +107,13 @@ class Service(models.Model):
 
     price = models.FloatField(default=0.0)
 
-    macro_category = models.ForeignKey(ServiceMacroCategory,on_delete=models.PROTECT)
+    macro_category = models.ForeignKey(ServiceMacroCategory,on_delete=models.PROTECT,blank=True)
 
-    tags = ManyToManyField("Tag", related_name="service_tags", blank=True)
+    tags = models.ManyToManyField("Tag", related_name="service_tags", blank=True)
 
-    tips = ManyToManyField("Tip", related_name="service_tips", blank=True)
+    tips = models.ManyToManyField("Tip", related_name="service_tips", blank=True)
 
-    category = models.ForeignKey(ServiceCategory,on_delete=models.PROTECT)
+    category = models.ForeignKey(ServiceCategory,on_delete=models.PROTECT, blank=True)
 
     class Meta:
         verbose_name = "Service"
