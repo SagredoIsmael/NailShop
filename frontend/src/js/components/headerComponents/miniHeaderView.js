@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   grid-template-columns: 100%;
   grid-template-rows: 100%;
   background-image: url(${miniBackGroundImage});
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: white;

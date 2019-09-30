@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-row:5;
   grid-template-columns: 100%;
-  grid-template-rows: 20% 5% 50% 5% 10%;
+  grid-template-rows: 10% 10% 50% 15% 15%;
 `
 
 const Title = styled.h1`
@@ -28,7 +28,7 @@ const ImagesWrapper = styled.div`
   grid-row:3;
   grid-template-columns: 5% 22% 22% 22% 22% 5%;
   grid-template-rows: 100%;
-  justify-items:center;
+  text-align: -webkit-center;
 `
 
 const Image = styled.div`

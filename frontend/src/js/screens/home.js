@@ -13,7 +13,7 @@ import Footer from '../containers/headerContainers/footerContainer'
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 14% 20% 37% 20% 20% 5%;
+  grid-template-rows: 14% 18% 40% 20% 15% 5%;
   background: white;
   height: ${props => props.mobile ? "150vh" : "470vh"};
 `;

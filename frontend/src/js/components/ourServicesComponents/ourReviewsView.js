@@ -22,7 +22,6 @@ const Title = styled.h1`
   font-size: 2.5vw;
   text-align: center;
   font-family: 'Rozha One', serif;
-  margin:0;
 `
 
 const ImagesWrapper = styled.div`

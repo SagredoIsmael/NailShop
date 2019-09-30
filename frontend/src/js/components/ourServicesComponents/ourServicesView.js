@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Colors from '../../utils/colors'
 import { Link } from 'react-router-dom'
+import { SimpleButton } from '../muiComponents/buttons'
 import backgroundImage from '../../../img/ourServicesView/background.png'
 import manicuraImage from '../../../img/ourServicesView/manicura.png'
 import peinadosImage from '../../../img/ourServicesView/peinados.png'
@@ -16,7 +17,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-row:3;
   grid-template-columns: 100%;
-  grid-template-rows: 7% 10% 18% 5% 7% 10% 43%;
+  grid-template-rows: 5% 10% 18% 5% 5% 8% 43% 3% 7%;
 `
 
 const Title = styled.h1`
@@ -55,7 +56,7 @@ const BackgroundWrapper = styled.div`
   display: grid;
   grid-row:7;
   background-image: url(${backgroundImage});
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   grid-template-columns: 33% 33% 33%;
@@ -82,6 +83,13 @@ const TextSectionWrapper = styled.div`
   margin-right: 2vw;
   align-content: center;
   color: ${props => props.color};
+`
+
+const DefaultWrapper = styled.div`
+  display: grid;
+  grid-column: ${props => props.gridColumn};
+  grid-row: ${props => props.gridRow};
+  justify-content:center;
 `
 
 
@@ -153,6 +161,11 @@ const OurServicesView = ({openInstagramLink}) => (
         Y si estás content@, puntúa a nuestr@ profesional y os bonificaremos a l@s dos!
       </TextSectionWrapper>
     </BackgroundWrapper>
+    <DefaultWrapper gridColumn="1" gridRow="9">
+      <Link to="/professionals" style={{ textDecoration: 'none', justifySelf: 'center' }}>
+        <SimpleButton text="RESERVAR" style={{width: '15vw', height: '4.60vw', fontSize: '1.3vw', padding:'inherit'}} onClick={() => null}/>
+      </Link>
+    </DefaultWrapper>
   </Wrapper>
 )
 

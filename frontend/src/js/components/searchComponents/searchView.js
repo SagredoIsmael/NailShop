@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   grid-template-columns: 15% 70% 15%;
   grid-template-rows: 20% 30% 7% 40%;
   background-image: url(${pinkBackGround});
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: white;
@@ -82,7 +82,7 @@ const SearchView = ({setServiceSearch, setPostalCodeSearch, setDateSearch, servi
     </InputDataWrapper>
     <DefaultWrapper gridColumn="2" gridRow="4">
       <Link to="/professionals" style={{ textDecoration: 'none', justifySelf: 'center' }}>
-        <SimpleButton text="BOOKEAR" style={{width: '15vw', height: '4.60vw', fontSize: '1.3vw', padding:'inherit'}} onClick={() => null}/>
+        <SimpleButton text="RESERVAR" style={{width: '15vw', height: '4.60vw', fontSize: '1.3vw', padding:'inherit'}} onClick={() => null}/>
       </Link>
     </DefaultWrapper>
   </Wrapper>

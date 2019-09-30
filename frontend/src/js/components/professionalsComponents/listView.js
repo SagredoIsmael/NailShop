@@ -17,7 +17,7 @@ const ListView = ({fetchProfessionals, loading, items}) => {
   useEffect(() => { fetchProfessionals() }, [])
     return (
     <Wrapper>
-      { loading ? <SpinnerRound/> : null }
+      { loading ? <SpinnerRound/> : <SpinnerRound/> }
       {items.map((item, index) => (
         <Item key={index} item={item} />
       ))}
