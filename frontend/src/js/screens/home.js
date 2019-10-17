@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 
 const Home = () => (
   <>
-    <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>
+    <MediaQuery minDeviceWidth={100} >
       <Wrapper>
         <Header/>
         <Search/>
