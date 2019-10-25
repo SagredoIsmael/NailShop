@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import Colors from '../../utils/colors'
 import { Link } from 'react-router-dom'
 import { SimpleButton } from '../muiComponents/buttons'
-import maletinImage from '../../../img/ourServicesView/ourTeam/maletin.jpg'
-import moneyImage from '../../../img/ourServicesView/ourTeam/money.jpg'
-import handMoneyImage from '../../../img/ourServicesView/ourTeam/hand_money.jpg'
-import capImage from '../../../img/ourServicesView/ourTeam/cap.jpg'
+import maletinImage from '../../../assets/img/ourServicesView/ourTeam/maletin.jpg'
+import moneyImage from '../../../assets/img/ourServicesView/ourTeam/money.jpg'
+import handMoneyImage from '../../../assets/img/ourServicesView/ourTeam/hand_money.jpg'
+import capImage from '../../../assets/img/ourServicesView/ourTeam/cap.jpg'
 
 const Wrapper = styled.div`
   display: grid;

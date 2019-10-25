@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Colors from '../../utils/colors'
 import { SimpleButton } from '../muiComponents/buttons'
-import pinkBackGround from '../../../img/searchView/background.png'
+import pinkBackGround from '../../../assets/img/searchView/background.png'
 import { TextFieldDownshift, TextfieldOutline } from '../muiComponents/textFields'
-import calendarIcon from '../../../img/searchView/icon_calendar.jpg'
-import nailPolishIcon from '../../../img/searchView/icon_nail_polish.jpg'
-import locationIcon from '../../../img/searchView/icon_location.jpg'
+import calendarIcon from '../../../assets/img/searchView/icon_calendar.jpg'
+import nailPolishIcon from '../../../assets/img/searchView/icon_nail_polish.jpg'
+import locationIcon from '../../../assets/img/searchView/icon_location.jpg'
 
 const Wrapper = styled.div`
   display: grid;

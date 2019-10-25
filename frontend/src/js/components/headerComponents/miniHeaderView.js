@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Colors from '../../utils/colors'
-import miniBackGroundImage from '../../../img/headerView/mini-header.png'
+import miniBackGroundImage from '../../../assets/img/headerView/mini-header.png'
 
 const Wrapper = styled.div`
   display: grid;

@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Colors from '../../utils/colors'
 import { Link } from 'react-router-dom'
-import review1 from '../../../img/ourServicesView/reviews/reseña1.jpg'
-import review2 from '../../../img/ourServicesView/reviews/reseña2.jpg'
-import review3 from '../../../img/ourServicesView/reviews/reseña3.jpg'
-import review4 from '../../../img/ourServicesView/reviews/reseña4.jpg'
-import review5 from '../../../img/ourServicesView/reviews/reseña5.jpg'
-import generalReview from '../../../img/ourServicesView/reviews/generalReview.jpg'
+import review1 from '../../../assets/img/ourServicesView/reviews/reseña1.jpg'
+import review2 from '../../../assets/img/ourServicesView/reviews/reseña2.jpg'
+import review3 from '../../../assets/img/ourServicesView/reviews/reseña3.jpg'
+import review4 from '../../../assets/img/ourServicesView/reviews/reseña4.jpg'
+import review5 from '../../../assets/img/ourServicesView/reviews/reseña5.jpg'
+import generalReview from '../../../assets/img/ourServicesView/reviews/generalReview.jpg'
 
 const Wrapper = styled.div`
   display: grid;

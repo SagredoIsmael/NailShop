@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Colors from '../../utils/colors'
-import backGroundImage from '../../../img/footerView/footer.png'
+import backGroundImage from '../../../assets/img/footerView/footer.png'
 
 const Wrapper = styled.div`
   display: grid;
