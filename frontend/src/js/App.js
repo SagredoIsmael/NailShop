@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import '../assets/css/index.css'
 import Home from './screens/home'
 import Professionals from './screens/professionals'
-
+import ComingSoon from './screens/comingSoon'
 
 
 function App() {
@@ -16,11 +16,14 @@ function App() {
         <div>
           <Redirect
             from="/"
-            to="/home" />
+            to="/ComingSoon" />
             <Redirect
               from=""
-              to="/home" />
+              to="/ComingSoon" />
           <Switch>
+          <Route
+              path="/ComingSoon"
+              component={ComingSoon} />
             <Route
               path="/home"
               component={Home} />
