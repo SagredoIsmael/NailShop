@@ -1,4 +1,8 @@
-# orgasmi
-Orgasmi Project
+# Example main Commerce
 
-Created using boilerplate from (here)[https://github.com/cfranklin11/docker-django-react]
+This project is only an example of the initial screen of a shop.
+
+Technologies used:
+  - Python
+  - React
+  - Docker
